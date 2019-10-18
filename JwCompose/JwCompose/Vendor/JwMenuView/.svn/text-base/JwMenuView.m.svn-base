@@ -1,0 +1,251 @@
+//
+//  JwMenuView.m
+//  Purchase_iOS
+//
+//  Created by 陈警卫 on 2018/9/5.
+//  Copyright © 2018年 陈警卫. All rights reserved.
+//
+
+#import "JwMenuView.h"
+#import "MacroAttribute.h"
+
+@interface JwMenuView ()
+
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIView *progressView;
+@property (nonatomic, strong) NSMutableArray *cells;
+
+@end
+
+@implementation JwMenuView
+
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupView];
+    }
+    return self;
+}
+
+- (void)setupView{
+    self.scrollView = [[UIScrollView alloc] initWithFrame:(self.bounds)];
+    self.scrollView.showsVerticalScrollIndicator = NO;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.backgroundColor = [UIColor clearColor];
+    self.scrollView.scrollsToTop = NO;
+    self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    if (@available(iOS 11.0, *)) {
+        self.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+    [self addSubview:self.scrollView];
+    self.scrollDirection = JwMenuViewScrollDirectionHorizontal;
+}
+
+- (void)setScrollDirection:(JwMenuViewScrollDirection)scrollDirection{
+    _scrollDirection = scrollDirection;
+    if (scrollDirection == JwMenuViewScrollDirectionVertical) {
+        self.scrollView.alwaysBounceVertical = YES;
+        self.scrollView.alwaysBounceHorizontal = NO;
+    }
+    if (scrollDirection == JwMenuViewScrollDirectionHorizontal) {
+        self.scrollView.alwaysBounceVertical = NO;
+        self.scrollView.alwaysBounceHorizontal = YES;
+    }
+}
+
+- (void)setDatas:(NSArray *)datas{
+    _datas = datas;
+}
+
+- (void)setProgressColor:(UIColor *)progressColor{
+    _progressColor = progressColor;
+    self.progressView.backgroundColor = progressColor;
+}
+
+- (void)setIsScroll:(BOOL)isScroll{
+    _isScroll = isScroll;
+    self.scrollView.scrollEnabled = YES;
+}
+
+- (void)reloadData{
+    [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
+    CGFloat progressH = 0;
+    if (self.isShowProgress) {
+        progressH = 2.0;
+    }
+    
+    self.cells = [NSMutableArray array];
+    [self.datas enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        JwMenuItem *item = [[JwMenuItem alloc] init];
+        if ([self.dataSource respondsToSelector:@selector(menuView:itemForIndex:)]) {
+            item = [self.dataSource menuView:self itemForIndex:idx];
+        }
+        item.data = obj;
+        item.index = idx;
+        
+        JwMenuItem *lastItem = self.cells.lastObject;
+        if (self.scrollDirection == JwMenuViewScrollDirectionHorizontal) {
+            
+            if (self.isAverage) {
+                CGFloat itemW = self.jw_width/self.datas.count;
+                self.spaceItem = 0;
+                item.frame = CGRectMake(0, 0, itemW ,self.jw_height - progressH);
+                if (self.isSpaceLine) {
+                    if (idx == 0) {
+                        item.jw_x = lastItem.jw_right + self.spaceItem;
+                    }else{
+                        item.jw_x = lastItem.jw_right + self.spaceItem + 1;//间隔线宽度
+                    }
+                }else{
+                    item.jw_x = lastItem.jw_right + self.spaceItem;
+                }
+            }else{
+                item.frame = CGRectMake(0, 0, item.jw_width, self.jw_height - progressH);
+                item.jw_x = lastItem.jw_right + self.spaceItem;
+            }
+        }
+        if (self.scrollDirection == JwMenuViewScrollDirectionVertical) {
+            item.frame = CGRectMake(0, 0, self.jw_width - progressH, item.jw_height);
+            item.jw_y = lastItem.jw_bottom;
+        }
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+        [item addGestureRecognizer:tap];
+        [self.scrollView addSubview:item];
+        if (self.isSpaceLine) {
+            UIView *lineV = [[UIView alloc] initWithFrame:(CGRectMake(item.jw_right, 0, 1, 10))];
+            lineV.jw_centerY = self.jw_height/2.0;
+            lineV.backgroundColor = self.spaceLineColor ?: [UIColor grayColor];
+            [self.scrollView addSubview:lineV];
+        }
+        [self.cells addObject:item];
+    }];
+    
+    JwMenuItem *lastItem = self.cells.lastObject;
+    if (self.scrollDirection == JwMenuViewScrollDirectionHorizontal) {
+        self.scrollView.contentSize = CGSizeMake(lastItem.jw_right + self.spaceItem, self.scrollView.jw_height);
+    }
+    if (self.scrollDirection == JwMenuViewScrollDirectionVertical) {
+        self.scrollView.contentSize = CGSizeMake(self.scrollView.jw_width, lastItem.jw_bottom);
+    }
+    
+    self.progressView = [[UIView alloc] init];
+    JwMenuItem *firstItem = self.cells.firstObject;
+    if (self.scrollDirection == JwMenuViewScrollDirectionHorizontal) {
+        self.progressView.frame = CGRectMake(firstItem.jw_x, firstItem.jw_bottom, firstItem.jw_width, progressH);
+        self.progressView.layer.cornerRadius = self.progressView.jw_height/2.0;
+    }
+    if (self.scrollDirection == JwMenuViewScrollDirectionVertical) {
+       self.progressView.frame = CGRectMake(firstItem.jw_right, firstItem.jw_y, progressH, firstItem.jw_height);
+        self.progressView.layer.cornerRadius = self.progressView.jw_width/2.0;
+    }
+    self.progressView.layer.masksToBounds = YES;
+    self.progressView.backgroundColor = self.progressColor;
+    [self.scrollView addSubview:self.progressView];
+}
+
+- (void)tapAction:(UITapGestureRecognizer *)tap{
+    JwMenuItem *item = (JwMenuItem *)tap.view;
+    if ([self.delegate respondsToSelector:@selector(menuView:didiSelectAtIndex:data:)]) {
+        [self.delegate menuView:self didiSelectAtIndex:item.index data:item.data];
+    }
+}
+
+- (void)setValueWithOffset:(CGFloat)offset width:(CGFloat)width count:(NSInteger)count{
+    if (width <= 0) {
+        return;
+    }
+    offset = offset >= 0.0 ? offset : 0.0;
+    offset = offset < width * (count - 1) ? offset : width * (count - 1);
+    
+    CGFloat value = offset / width;
+    value = value - floor(value);
+    
+    NSInteger fromIndex = offset/width;
+    NSInteger toIndex = fromIndex + 1;
+    
+    [self setValue:value fromIndex:fromIndex toIndex:toIndex];
+}
+
+- (void)setValue:(CGFloat)value fromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex{
+    JwMenuItem *fromCell;
+    JwMenuItem *toCell;
+    if (fromIndex >= 0 && fromIndex < self.cells.count) {
+        fromCell = self.cells[fromIndex];
+    }
+    if (toIndex >= 0 && toIndex < self.cells.count) {
+        toCell = self.cells[toIndex];
+    }
+    fromCell.rate = 1.0 - value;
+    toCell.rate = value;
+    
+    //清除其他cell的rate
+    [self clearCellContentWitFromIndex:fromIndex toIndex:toIndex];
+    //进度条
+    if (self.scrollDirection == JwMenuViewScrollDirectionHorizontal) {
+        CGRect rect = CGRectZero;
+        rect.origin.x = fromCell.jw_x + (toCell.jw_x - fromCell.jw_x) * value;
+        rect.size.width = fromCell.jw_width + (toCell.jw_width - fromCell.jw_width) * value;
+        
+        rect.origin.y = self.progressView.jw_y;
+        rect.size.height = self.progressView.jw_height;
+        self.progressView.frame = rect;
+    }else if (self.scrollDirection == JwMenuViewScrollDirectionVertical){
+        CGRect rect = CGRectZero;
+        rect.origin.y = fromCell.jw_y + (toCell.jw_y - fromCell.jw_y) * value;
+        rect.size.height = fromCell.jw_height + (toCell.jw_height - fromCell.jw_height) * value;
+        
+        rect.origin.x = self.progressView.jw_x;
+        rect.size.width = self.progressView.jw_width;
+        self.progressView.frame = rect;
+    }
+    
+    [self refreshContenOffsetWithtoIndex:toIndex];
+}
+
+// 让选中的item位于中间
+- (void)refreshContenOffsetWithtoIndex:(NSInteger)toIndex{
+    JwMenuItem *toCell;
+    if (toIndex > 0 && toIndex < self.cells.count) {
+        toCell = self.cells[toIndex - 1];
+    }else{
+        return;
+    }
+    CGRect frame = toCell.frame;
+    CGFloat itemX = frame.origin.x;
+    CGFloat width = self.scrollView.frame.size.width;
+    CGSize contentSize = self.scrollView.contentSize;
+    if (itemX > width/2.0) {
+        CGFloat targetX;
+        if ((contentSize.width - itemX) <= width/2.0) {
+            targetX = contentSize.width - width;
+        } else {
+            targetX = frame.origin.x - width/2.0 + frame.size.width/2.0;
+        }
+        if (targetX + width > contentSize.width) {
+            targetX = contentSize.width - width;
+        }
+        [self.scrollView setContentOffset:CGPointMake(targetX, 0) animated:YES];
+    } else {
+        [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+    }
+}
+
+- (void)clearCellContentWitFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex{
+    [self.cells enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        JwMenuItem *cell = obj;
+        if (idx != fromIndex && idx != toIndex) {
+            [cell setRate:0.0f];
+        }
+    }];
+}
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+
+@end

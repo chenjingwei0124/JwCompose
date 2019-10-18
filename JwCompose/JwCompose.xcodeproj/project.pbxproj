@@ -1,0 +1,1197 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D811A90B0E66E9177C4628D /* libPods-JwCompose.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5D5F0192B3A68024888D29 /* libPods-JwCompose.a */; };
+		C8DFEFF62339FADD00048FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DFEFF52339FADD00048FDC /* Assets.xcassets */; };
+		C8DFEFF92339FADD00048FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8DFEFF72339FADD00048FDC /* LaunchScreen.storyboard */; };
+		C8DFEFFC2339FADD00048FDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFEFFB2339FADD00048FDC /* main.m */; };
+		C8DFF0042339FBE700048FDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0032339FBE700048FDC /* AppDelegate.m */; };
+		C8DFF045233A01DA00048FDC /* JwProgressHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF00B233A01D900048FDC /* JwProgressHelper.m */; };
+		C8DFF046233A01DA00048FDC /* JwCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF00C233A01D900048FDC /* JwCommon.m */; };
+		C8DFF047233A01DA00048FDC /* JwRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF00E233A01D900048FDC /* JwRegular.m */; };
+		C8DFF048233A01DA00048FDC /* JwSavedPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF00F233A01D900048FDC /* JwSavedPhotos.m */; };
+		C8DFF049233A01DA00048FDC /* JwJailBreak.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF010233A01D900048FDC /* JwJailBreak.m */; };
+		C8DFF04A233A01DA00048FDC /* JwPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF011233A01D900048FDC /* JwPlaceholderView.m */; };
+		C8DFF04B233A01DA00048FDC /* JwDIYHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF012233A01D900048FDC /* JwDIYHeader.m */; };
+		C8DFF04C233A01DA00048FDC /* JwUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF014233A01D900048FDC /* JwUUID.m */; };
+		C8DFF04D233A01DA00048FDC /* JwButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF01D233A01D900048FDC /* JwButton.m */; };
+		C8DFF04E233A01DA00048FDC /* JwReusableLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF01E233A01D900048FDC /* JwReusableLayer.m */; };
+		C8DFF04F233A01DA00048FDC /* JwImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF01F233A01D900048FDC /* JwImageView.m */; };
+		C8DFF050233A01DA00048FDC /* JwTableGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF023233A01DA00048FDC /* JwTableGestureView.m */; };
+		C8DFF051233A01DA00048FDC /* JwCollectionGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF024233A01DA00048FDC /* JwCollectionGestureView.m */; };
+		C8DFF052233A01DA00048FDC /* JwView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF027233A01DA00048FDC /* JwView.m */; };
+		C8DFF053233A01DA00048FDC /* UITextField+JwCate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF02D233A01DA00048FDC /* UITextField+JwCate.m */; };
+		C8DFF054233A01DA00048FDC /* NSString+JwCate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF02F233A01DA00048FDC /* NSString+JwCate.m */; };
+		C8DFF055233A01DA00048FDC /* UIView+JwDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF030233A01DA00048FDC /* UIView+JwDefault.m */; };
+		C8DFF056233A01DA00048FDC /* UIImage+JwCate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF031233A01DA00048FDC /* UIImage+JwCate.m */; };
+		C8DFF057233A01DA00048FDC /* UILabel+JwCate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF033233A01DA00048FDC /* UILabel+JwCate.m */; };
+		C8DFF058233A01DA00048FDC /* UIImageView+JwCate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF034233A01DA00048FDC /* UIImageView+JwCate.m */; };
+		C8DFF059233A01DA00048FDC /* UIBarButtonItem+JwCate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF037233A01DA00048FDC /* UIBarButtonItem+JwCate.m */; };
+		C8DFF05A233A01DA00048FDC /* UIColor+JwCate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF038233A01DA00048FDC /* UIColor+JwCate.m */; };
+		C8DFF05B233A01DA00048FDC /* UINavigationController+JwCate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF039233A01DA00048FDC /* UINavigationController+JwCate.m */; };
+		C8DFF05C233A01DA00048FDC /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF03B233A01DA00048FDC /* UIView+Gradient.m */; };
+		C8DFF05D233A01DA00048FDC /* UIView+JwNib.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF03D233A01DA00048FDC /* UIView+JwNib.m */; };
+		C8DFF05E233A01DA00048FDC /* UIViewController+JwCate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF041233A01DA00048FDC /* UIViewController+JwCate.m */; };
+		C8DFF05F233A01DA00048FDC /* UIScrollView+JwRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF043233A01DA00048FDC /* UIScrollView+JwRefresh.m */; };
+		C8DFF060233A01DA00048FDC /* UIView+JwCate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF044233A01DA00048FDC /* UIView+JwCate.m */; };
+		C8DFF070233A01E900048FDC /* JwLocalCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF064233A01E800048FDC /* JwLocalCenter.m */; };
+		C8DFF071233A01E900048FDC /* JwHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF066233A01E800048FDC /* JwHttpManager.m */; };
+		C8DFF072233A01E900048FDC /* JwBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF069233A01E800048FDC /* JwBaseService.m */; };
+		C8DFF073233A01E900048FDC /* JwHttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF06C233A01E800048FDC /* JwHttpHelper.m */; };
+		C8DFF074233A01E900048FDC /* JwDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF06E233A01E800048FDC /* JwDataService.m */; };
+		C8DFF07A233A020400048FDC /* JwProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF078233A020400048FDC /* JwProjectModel.m */; };
+		C8DFF07B233A020400048FDC /* JwUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF079233A020400048FDC /* JwUserModel.m */; };
+		C8DFF0B0233A020B00048FDC /* UIView+AZGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF07F233A020B00048FDC /* UIView+AZGradient.m */; };
+		C8DFF0B1233A020B00048FDC /* AESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF081233A020B00048FDC /* AESCipher.m */; };
+		C8DFF0B2233A020B00048FDC /* JwShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF084233A020B00048FDC /* JwShareHelper.m */; };
+		C8DFF0B3233A020B00048FDC /* JwShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF085233A020B00048FDC /* JwShareModel.m */; };
+		C8DFF0B4233A020B00048FDC /* JwiPhoneType.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF08A233A020B00048FDC /* JwiPhoneType.m */; };
+		C8DFF0B5233A020B00048FDC /* JwMenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF08D233A020B00048FDC /* JwMenuViewCell.m */; };
+		C8DFF0B6233A020B00048FDC /* JwMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF08F233A020B00048FDC /* JwMenuViewController.m */; };
+		C8DFF0B7233A020B00048FDC /* JwMenuTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF091233A020B00048FDC /* JwMenuTextItem.m */; };
+		C8DFF0B8233A020B00048FDC /* JwMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF095233A020B00048FDC /* JwMenuView.m */; };
+		C8DFF0B9233A020B00048FDC /* JwMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF096233A020B00048FDC /* JwMenuItem.m */; };
+		C8DFF0BA233A020B00048FDC /* JwAmountTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF098233A020B00048FDC /* JwAmountTextField.m */; };
+		C8DFF0BB233A020B00048FDC /* JwStarsProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF09C233A020B00048FDC /* JwStarsProgress.m */; };
+		C8DFF0BC233A020B00048FDC /* JwIntroDefaultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8DFF0A0233A020B00048FDC /* JwIntroDefaultCell.xib */; };
+		C8DFF0BD233A020B00048FDC /* JwIntroDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0A1233A020B00048FDC /* JwIntroDefaultCell.m */; };
+		C8DFF0BE233A020B00048FDC /* JwIntroduceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0A2233A020B00048FDC /* JwIntroduceView.m */; };
+		C8DFF0BF233A020B00048FDC /* JwCarouselCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0A6233A020B00048FDC /* JwCarouselCell.m */; };
+		C8DFF0C0233A020B00048FDC /* JwCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0A7233A020B00048FDC /* JwCarouselView.m */; };
+		C8DFF0C1233A020B00048FDC /* JwLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0A9233A020B00048FDC /* JwLocationHelper.m */; };
+		C8DFF0C2233A020B00048FDC /* TYWaveProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0AD233A020B00048FDC /* TYWaveProgressView.m */; };
+		C8DFF0C3233A020B00048FDC /* TYWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0AE233A020B00048FDC /* TYWaterWaveView.m */; };
+		C8DFF0F7233A021400048FDC /* mine.json in Resources */ = {isa = PBXBuildFile; fileRef = C8DFF0C8233A021400048FDC /* mine.json */; };
+		C8DFF0F8233A021400048FDC /* JwMineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0C9233A021400048FDC /* JwMineModel.m */; };
+		C8DFF0F9233A021400048FDC /* JwMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0CD233A021400048FDC /* JwMineController.m */; };
+		C8DFF0FA233A021400048FDC /* JwMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0D0233A021400048FDC /* JwMineCell.m */; };
+		C8DFF0FB233A021400048FDC /* JwClassifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0D3233A021400048FDC /* JwClassifyModel.m */; };
+		C8DFF0FC233A021400048FDC /* JwHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0D7233A021400048FDC /* JwHomeController.m */; };
+		C8DFF0FD233A021400048FDC /* JwClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0DA233A021400048FDC /* JwClassifyCell.m */; };
+		C8DFF0FE233A021400048FDC /* subs.json in Resources */ = {isa = PBXBuildFile; fileRef = C8DFF0DD233A021400048FDC /* subs.json */; };
+		C8DFF0FF233A021400048FDC /* JwFineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0DE233A021400048FDC /* JwFineModel.m */; };
+		C8DFF100233A021400048FDC /* JwFindController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0E1233A021400048FDC /* JwFindController.m */; };
+		C8DFF101233A021400048FDC /* JwFindCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0E5233A021400048FDC /* JwFindCell.m */; };
+		C8DFF102233A021400048FDC /* JwBaseProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0E9233A021400048FDC /* JwBaseProjectModel.m */; };
+		C8DFF103233A021400048FDC /* JwBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0EA233A021400048FDC /* JwBaseModel.m */; };
+		C8DFF104233A021400048FDC /* JwNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0ED233A021400048FDC /* JwNavigationController.m */; };
+		C8DFF105233A021400048FDC /* JwBaseMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0EE233A021400048FDC /* JwBaseMenuController.m */; };
+		C8DFF106233A021400048FDC /* JwTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0EF233A021400048FDC /* JwTabBarController.m */; };
+		C8DFF107233A021400048FDC /* JwBaseBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0F5233A021400048FDC /* JwBaseBackController.m */; };
+		C8DFF108233A021400048FDC /* JwBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0F6233A021400048FDC /* JwBaseViewController.m */; };
+		C8F6E6B9233B141C004B1F47 /* JwNavAnimController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F6E6B8233B141C004B1F47 /* JwNavAnimController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8E5D5F0192B3A68024888D29 /* libPods-JwCompose.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JwCompose.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F62C968F9115AD38408471 /* Pods-JwCompose.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JwCompose.release.xcconfig"; path = "Target Support Files/Pods-JwCompose/Pods-JwCompose.release.xcconfig"; sourceTree = "<group>"; };
+		BD2828D5769D549FB01D6015 /* Pods-JwCompose.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JwCompose.debug.xcconfig"; path = "Target Support Files/Pods-JwCompose/Pods-JwCompose.debug.xcconfig"; sourceTree = "<group>"; };
+		C8DFEFE62339FADA00048FDC /* JwCompose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JwCompose.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8DFEFF52339FADD00048FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8DFEFF82339FADD00048FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C8DFEFFA2339FADD00048FDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8DFEFFB2339FADD00048FDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C8DFF0022339FBE700048FDC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C8DFF0032339FBE700048FDC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C8DFF007233A011A00048FDC /* JwMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwMacro.h; sourceTree = "<group>"; };
+		C8DFF008233A011A00048FDC /* JwQuote.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwQuote.pch; sourceTree = "<group>"; };
+		C8DFF00B233A01D900048FDC /* JwProgressHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwProgressHelper.m; sourceTree = "<group>"; };
+		C8DFF00C233A01D900048FDC /* JwCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwCommon.m; sourceTree = "<group>"; };
+		C8DFF00D233A01D900048FDC /* JwUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwUUID.h; sourceTree = "<group>"; };
+		C8DFF00E233A01D900048FDC /* JwRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwRegular.m; sourceTree = "<group>"; };
+		C8DFF00F233A01D900048FDC /* JwSavedPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwSavedPhotos.m; sourceTree = "<group>"; };
+		C8DFF010233A01D900048FDC /* JwJailBreak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwJailBreak.m; sourceTree = "<group>"; };
+		C8DFF011233A01D900048FDC /* JwPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwPlaceholderView.m; sourceTree = "<group>"; };
+		C8DFF012233A01D900048FDC /* JwDIYHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwDIYHeader.m; sourceTree = "<group>"; };
+		C8DFF013233A01D900048FDC /* JwProgressHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwProgressHelper.h; sourceTree = "<group>"; };
+		C8DFF014233A01D900048FDC /* JwUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwUUID.m; sourceTree = "<group>"; };
+		C8DFF015233A01D900048FDC /* JwCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwCommon.h; sourceTree = "<group>"; };
+		C8DFF016233A01D900048FDC /* JwPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwPlaceholderView.h; sourceTree = "<group>"; };
+		C8DFF017233A01D900048FDC /* JwJailBreak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwJailBreak.h; sourceTree = "<group>"; };
+		C8DFF018233A01D900048FDC /* JwSavedPhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwSavedPhotos.h; sourceTree = "<group>"; };
+		C8DFF019233A01D900048FDC /* JwRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwRegular.h; sourceTree = "<group>"; };
+		C8DFF01A233A01D900048FDC /* JwDIYHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwDIYHeader.h; sourceTree = "<group>"; };
+		C8DFF01C233A01D900048FDC /* JwTableGestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwTableGestureView.h; sourceTree = "<group>"; };
+		C8DFF01D233A01D900048FDC /* JwButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwButton.m; sourceTree = "<group>"; };
+		C8DFF01E233A01D900048FDC /* JwReusableLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwReusableLayer.m; sourceTree = "<group>"; };
+		C8DFF01F233A01D900048FDC /* JwImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwImageView.m; sourceTree = "<group>"; };
+		C8DFF020233A01D900048FDC /* JwCollectionGestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwCollectionGestureView.h; sourceTree = "<group>"; };
+		C8DFF021233A01D900048FDC /* JwView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwView.h; sourceTree = "<group>"; };
+		C8DFF022233A01DA00048FDC /* JwButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwButton.h; sourceTree = "<group>"; };
+		C8DFF023233A01DA00048FDC /* JwTableGestureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwTableGestureView.m; sourceTree = "<group>"; };
+		C8DFF024233A01DA00048FDC /* JwCollectionGestureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwCollectionGestureView.m; sourceTree = "<group>"; };
+		C8DFF025233A01DA00048FDC /* JwImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwImageView.h; sourceTree = "<group>"; };
+		C8DFF026233A01DA00048FDC /* JwReusableLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwReusableLayer.h; sourceTree = "<group>"; };
+		C8DFF027233A01DA00048FDC /* JwView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwView.m; sourceTree = "<group>"; };
+		C8DFF029233A01DA00048FDC /* UIColor+JwCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JwCate.h"; sourceTree = "<group>"; };
+		C8DFF02A233A01DA00048FDC /* UINavigationController+JwCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JwCate.h"; sourceTree = "<group>"; };
+		C8DFF02B233A01DA00048FDC /* UIBarButtonItem+JwCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+JwCate.h"; sourceTree = "<group>"; };
+		C8DFF02C233A01DA00048FDC /* UIView+JwNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JwNib.h"; sourceTree = "<group>"; };
+		C8DFF02D233A01DA00048FDC /* UITextField+JwCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JwCate.m"; sourceTree = "<group>"; };
+		C8DFF02E233A01DA00048FDC /* UIView+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gradient.h"; sourceTree = "<group>"; };
+		C8DFF02F233A01DA00048FDC /* NSString+JwCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JwCate.m"; sourceTree = "<group>"; };
+		C8DFF030233A01DA00048FDC /* UIView+JwDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JwDefault.m"; sourceTree = "<group>"; };
+		C8DFF031233A01DA00048FDC /* UIImage+JwCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JwCate.m"; sourceTree = "<group>"; };
+		C8DFF032233A01DA00048FDC /* UIViewController+JwCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JwCate.h"; sourceTree = "<group>"; };
+		C8DFF033233A01DA00048FDC /* UILabel+JwCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JwCate.m"; sourceTree = "<group>"; };
+		C8DFF034233A01DA00048FDC /* UIImageView+JwCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JwCate.m"; sourceTree = "<group>"; };
+		C8DFF035233A01DA00048FDC /* UIView+JwCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JwCate.h"; sourceTree = "<group>"; };
+		C8DFF036233A01DA00048FDC /* UIScrollView+JwRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+JwRefresh.h"; sourceTree = "<group>"; };
+		C8DFF037233A01DA00048FDC /* UIBarButtonItem+JwCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+JwCate.m"; sourceTree = "<group>"; };
+		C8DFF038233A01DA00048FDC /* UIColor+JwCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JwCate.m"; sourceTree = "<group>"; };
+		C8DFF039233A01DA00048FDC /* UINavigationController+JwCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JwCate.m"; sourceTree = "<group>"; };
+		C8DFF03A233A01DA00048FDC /* NSString+JwCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JwCate.h"; sourceTree = "<group>"; };
+		C8DFF03B233A01DA00048FDC /* UIView+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gradient.m"; sourceTree = "<group>"; };
+		C8DFF03C233A01DA00048FDC /* UITextField+JwCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JwCate.h"; sourceTree = "<group>"; };
+		C8DFF03D233A01DA00048FDC /* UIView+JwNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JwNib.m"; sourceTree = "<group>"; };
+		C8DFF03E233A01DA00048FDC /* UIImageView+JwCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JwCate.h"; sourceTree = "<group>"; };
+		C8DFF03F233A01DA00048FDC /* UILabel+JwCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JwCate.h"; sourceTree = "<group>"; };
+		C8DFF040233A01DA00048FDC /* UIImage+JwCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JwCate.h"; sourceTree = "<group>"; };
+		C8DFF041233A01DA00048FDC /* UIViewController+JwCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JwCate.m"; sourceTree = "<group>"; };
+		C8DFF042233A01DA00048FDC /* UIView+JwDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JwDefault.h"; sourceTree = "<group>"; };
+		C8DFF043233A01DA00048FDC /* UIScrollView+JwRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+JwRefresh.m"; sourceTree = "<group>"; };
+		C8DFF044233A01DA00048FDC /* UIView+JwCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JwCate.m"; sourceTree = "<group>"; };
+		C8DFF063233A01E800048FDC /* JwLocalCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwLocalCenter.h; sourceTree = "<group>"; };
+		C8DFF064233A01E800048FDC /* JwLocalCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwLocalCenter.m; sourceTree = "<group>"; };
+		C8DFF066233A01E800048FDC /* JwHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwHttpManager.m; sourceTree = "<group>"; };
+		C8DFF067233A01E800048FDC /* JwBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwBaseService.h; sourceTree = "<group>"; };
+		C8DFF068233A01E800048FDC /* JwHttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwHttpHelper.h; sourceTree = "<group>"; };
+		C8DFF069233A01E800048FDC /* JwBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwBaseService.m; sourceTree = "<group>"; };
+		C8DFF06A233A01E800048FDC /* JwHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwHttpManager.h; sourceTree = "<group>"; };
+		C8DFF06B233A01E800048FDC /* JwServiceDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwServiceDefine.h; sourceTree = "<group>"; };
+		C8DFF06C233A01E800048FDC /* JwHttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwHttpHelper.m; sourceTree = "<group>"; };
+		C8DFF06E233A01E800048FDC /* JwDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwDataService.m; sourceTree = "<group>"; };
+		C8DFF06F233A01E800048FDC /* JwDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwDataService.h; sourceTree = "<group>"; };
+		C8DFF076233A020400048FDC /* JwUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwUserModel.h; sourceTree = "<group>"; };
+		C8DFF077233A020400048FDC /* JwProjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwProjectModel.h; sourceTree = "<group>"; };
+		C8DFF078233A020400048FDC /* JwProjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwProjectModel.m; sourceTree = "<group>"; };
+		C8DFF079233A020400048FDC /* JwUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwUserModel.m; sourceTree = "<group>"; };
+		C8DFF07E233A020B00048FDC /* UIView+AZGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AZGradient.h"; sourceTree = "<group>"; };
+		C8DFF07F233A020B00048FDC /* UIView+AZGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AZGradient.m"; sourceTree = "<group>"; };
+		C8DFF081233A020B00048FDC /* AESCipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCipher.m; sourceTree = "<group>"; };
+		C8DFF082233A020B00048FDC /* AESCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCipher.h; sourceTree = "<group>"; };
+		C8DFF084233A020B00048FDC /* JwShareHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwShareHelper.m; sourceTree = "<group>"; };
+		C8DFF085233A020B00048FDC /* JwShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwShareModel.m; sourceTree = "<group>"; };
+		C8DFF086233A020B00048FDC /* JwShareHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwShareHelper.h; sourceTree = "<group>"; };
+		C8DFF087233A020B00048FDC /* JwShareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwShareModel.h; sourceTree = "<group>"; };
+		C8DFF089233A020B00048FDC /* JwiPhoneType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwiPhoneType.h; sourceTree = "<group>"; };
+		C8DFF08A233A020B00048FDC /* JwiPhoneType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwiPhoneType.m; sourceTree = "<group>"; };
+		C8DFF08D233A020B00048FDC /* JwMenuViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwMenuViewCell.m; sourceTree = "<group>"; };
+		C8DFF08E233A020B00048FDC /* JwMenuTextItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwMenuTextItem.h; sourceTree = "<group>"; };
+		C8DFF08F233A020B00048FDC /* JwMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwMenuViewController.m; sourceTree = "<group>"; };
+		C8DFF090233A020B00048FDC /* JwMenuViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwMenuViewCell.h; sourceTree = "<group>"; };
+		C8DFF091233A020B00048FDC /* JwMenuTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwMenuTextItem.m; sourceTree = "<group>"; };
+		C8DFF092233A020B00048FDC /* JwMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwMenuViewController.h; sourceTree = "<group>"; };
+		C8DFF093233A020B00048FDC /* JwMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwMenuView.h; sourceTree = "<group>"; };
+		C8DFF094233A020B00048FDC /* JwMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwMenuItem.h; sourceTree = "<group>"; };
+		C8DFF095233A020B00048FDC /* JwMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwMenuView.m; sourceTree = "<group>"; };
+		C8DFF096233A020B00048FDC /* JwMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwMenuItem.m; sourceTree = "<group>"; };
+		C8DFF098233A020B00048FDC /* JwAmountTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwAmountTextField.m; sourceTree = "<group>"; };
+		C8DFF099233A020B00048FDC /* JwAmountTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwAmountTextField.h; sourceTree = "<group>"; };
+		C8DFF09B233A020B00048FDC /* JwStarsProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwStarsProgress.h; sourceTree = "<group>"; };
+		C8DFF09C233A020B00048FDC /* JwStarsProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwStarsProgress.m; sourceTree = "<group>"; };
+		C8DFF09E233A020B00048FDC /* JwIntroDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwIntroDefaultCell.h; sourceTree = "<group>"; };
+		C8DFF09F233A020B00048FDC /* JwIntroduceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwIntroduceView.h; sourceTree = "<group>"; };
+		C8DFF0A0233A020B00048FDC /* JwIntroDefaultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JwIntroDefaultCell.xib; sourceTree = "<group>"; };
+		C8DFF0A1233A020B00048FDC /* JwIntroDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwIntroDefaultCell.m; sourceTree = "<group>"; };
+		C8DFF0A2233A020B00048FDC /* JwIntroduceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwIntroduceView.m; sourceTree = "<group>"; };
+		C8DFF0A4233A020B00048FDC /* JwCarouselCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwCarouselCell.h; sourceTree = "<group>"; };
+		C8DFF0A5233A020B00048FDC /* JwCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwCarouselView.h; sourceTree = "<group>"; };
+		C8DFF0A6233A020B00048FDC /* JwCarouselCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwCarouselCell.m; sourceTree = "<group>"; };
+		C8DFF0A7233A020B00048FDC /* JwCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwCarouselView.m; sourceTree = "<group>"; };
+		C8DFF0A9233A020B00048FDC /* JwLocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwLocationHelper.m; sourceTree = "<group>"; };
+		C8DFF0AA233A020B00048FDC /* JwLocationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwLocationHelper.h; sourceTree = "<group>"; };
+		C8DFF0AC233A020B00048FDC /* TYWaterWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYWaterWaveView.h; sourceTree = "<group>"; };
+		C8DFF0AD233A020B00048FDC /* TYWaveProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYWaveProgressView.m; sourceTree = "<group>"; };
+		C8DFF0AE233A020B00048FDC /* TYWaterWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYWaterWaveView.m; sourceTree = "<group>"; };
+		C8DFF0AF233A020B00048FDC /* TYWaveProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYWaveProgressView.h; sourceTree = "<group>"; };
+		C8DFF0C8233A021400048FDC /* mine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mine.json; sourceTree = "<group>"; };
+		C8DFF0C9233A021400048FDC /* JwMineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwMineModel.m; sourceTree = "<group>"; };
+		C8DFF0CA233A021400048FDC /* JwMineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwMineModel.h; sourceTree = "<group>"; };
+		C8DFF0CC233A021400048FDC /* JwMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwMineController.h; sourceTree = "<group>"; };
+		C8DFF0CD233A021400048FDC /* JwMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwMineController.m; sourceTree = "<group>"; };
+		C8DFF0CF233A021400048FDC /* JwMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwMineCell.h; sourceTree = "<group>"; };
+		C8DFF0D0233A021400048FDC /* JwMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwMineCell.m; sourceTree = "<group>"; };
+		C8DFF0D3233A021400048FDC /* JwClassifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwClassifyModel.m; sourceTree = "<group>"; };
+		C8DFF0D4233A021400048FDC /* JwClassifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwClassifyModel.h; sourceTree = "<group>"; };
+		C8DFF0D6233A021400048FDC /* JwHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwHomeController.h; sourceTree = "<group>"; };
+		C8DFF0D7233A021400048FDC /* JwHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwHomeController.m; sourceTree = "<group>"; };
+		C8DFF0D9233A021400048FDC /* JwClassifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwClassifyCell.h; sourceTree = "<group>"; };
+		C8DFF0DA233A021400048FDC /* JwClassifyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwClassifyCell.m; sourceTree = "<group>"; };
+		C8DFF0DD233A021400048FDC /* subs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subs.json; sourceTree = "<group>"; };
+		C8DFF0DE233A021400048FDC /* JwFineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwFineModel.m; sourceTree = "<group>"; };
+		C8DFF0DF233A021400048FDC /* JwFineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwFineModel.h; sourceTree = "<group>"; };
+		C8DFF0E1233A021400048FDC /* JwFindController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwFindController.m; sourceTree = "<group>"; };
+		C8DFF0E2233A021400048FDC /* JwFindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwFindController.h; sourceTree = "<group>"; };
+		C8DFF0E4233A021400048FDC /* JwFindCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwFindCell.h; sourceTree = "<group>"; };
+		C8DFF0E5233A021400048FDC /* JwFindCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwFindCell.m; sourceTree = "<group>"; };
+		C8DFF0E8233A021400048FDC /* JwBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwBaseModel.h; sourceTree = "<group>"; };
+		C8DFF0E9233A021400048FDC /* JwBaseProjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwBaseProjectModel.m; sourceTree = "<group>"; };
+		C8DFF0EA233A021400048FDC /* JwBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwBaseModel.m; sourceTree = "<group>"; };
+		C8DFF0EB233A021400048FDC /* JwBaseProjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwBaseProjectModel.h; sourceTree = "<group>"; };
+		C8DFF0ED233A021400048FDC /* JwNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwNavigationController.m; sourceTree = "<group>"; };
+		C8DFF0EE233A021400048FDC /* JwBaseMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwBaseMenuController.m; sourceTree = "<group>"; };
+		C8DFF0EF233A021400048FDC /* JwTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwTabBarController.m; sourceTree = "<group>"; };
+		C8DFF0F0233A021400048FDC /* JwBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwBaseViewController.h; sourceTree = "<group>"; };
+		C8DFF0F1233A021400048FDC /* JwBaseBackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwBaseBackController.h; sourceTree = "<group>"; };
+		C8DFF0F2233A021400048FDC /* JwNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwNavigationController.h; sourceTree = "<group>"; };
+		C8DFF0F3233A021400048FDC /* JwTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwTabBarController.h; sourceTree = "<group>"; };
+		C8DFF0F4233A021400048FDC /* JwBaseMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwBaseMenuController.h; sourceTree = "<group>"; };
+		C8DFF0F5233A021400048FDC /* JwBaseBackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwBaseBackController.m; sourceTree = "<group>"; };
+		C8DFF0F6233A021400048FDC /* JwBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwBaseViewController.m; sourceTree = "<group>"; };
+		C8F6E6B7233B141C004B1F47 /* JwNavAnimController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwNavAnimController.h; sourceTree = "<group>"; };
+		C8F6E6B8233B141C004B1F47 /* JwNavAnimController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwNavAnimController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8DFEFE32339FADA00048FDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D811A90B0E66E9177C4628D /* libPods-JwCompose.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AEE9CDBC35593EE11D529237 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD2828D5769D549FB01D6015 /* Pods-JwCompose.debug.xcconfig */,
+				91F62C968F9115AD38408471 /* Pods-JwCompose.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C8DFEFDD2339FADA00048FDC = {
+			isa = PBXGroup;
+			children = (
+				C8DFEFE82339FADA00048FDC /* JwCompose */,
+				C8DFEFE72339FADA00048FDC /* Products */,
+				AEE9CDBC35593EE11D529237 /* Pods */,
+				EC9F6A79B58979758AE1821C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C8DFEFE72339FADA00048FDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFEFE62339FADA00048FDC /* JwCompose.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8DFEFE82339FADA00048FDC /* JwCompose */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF006233A011A00048FDC /* Macro */,
+				C8DFF005233A010000048FDC /* App */,
+				C8DFF009233A01D900048FDC /* Core */,
+				C8DFF061233A01E800048FDC /* General */,
+				C8DFF075233A020400048FDC /* Model */,
+				C8DFF07C233A020B00048FDC /* Vendor */,
+				C8DFF0C4233A021400048FDC /* Frame */,
+			);
+			path = JwCompose;
+			sourceTree = "<group>";
+		};
+		C8DFF005233A010000048FDC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0022339FBE700048FDC /* AppDelegate.h */,
+				C8DFF0032339FBE700048FDC /* AppDelegate.m */,
+				C8DFEFF52339FADD00048FDC /* Assets.xcassets */,
+				C8DFEFFA2339FADD00048FDC /* Info.plist */,
+				C8DFEFF72339FADD00048FDC /* LaunchScreen.storyboard */,
+				C8DFEFFB2339FADD00048FDC /* main.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C8DFF006233A011A00048FDC /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF007233A011A00048FDC /* JwMacro.h */,
+				C8DFF008233A011A00048FDC /* JwQuote.pch */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		C8DFF009233A01D900048FDC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF028233A01DA00048FDC /* Cate */,
+				C8DFF00A233A01D900048FDC /* Exten */,
+				C8DFF01B233A01D900048FDC /* Kit */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C8DFF00A233A01D900048FDC /* Exten */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF015233A01D900048FDC /* JwCommon.h */,
+				C8DFF00C233A01D900048FDC /* JwCommon.m */,
+				C8DFF01A233A01D900048FDC /* JwDIYHeader.h */,
+				C8DFF012233A01D900048FDC /* JwDIYHeader.m */,
+				C8DFF017233A01D900048FDC /* JwJailBreak.h */,
+				C8DFF010233A01D900048FDC /* JwJailBreak.m */,
+				C8DFF016233A01D900048FDC /* JwPlaceholderView.h */,
+				C8DFF011233A01D900048FDC /* JwPlaceholderView.m */,
+				C8DFF013233A01D900048FDC /* JwProgressHelper.h */,
+				C8DFF00B233A01D900048FDC /* JwProgressHelper.m */,
+				C8DFF019233A01D900048FDC /* JwRegular.h */,
+				C8DFF00E233A01D900048FDC /* JwRegular.m */,
+				C8DFF018233A01D900048FDC /* JwSavedPhotos.h */,
+				C8DFF00F233A01D900048FDC /* JwSavedPhotos.m */,
+				C8DFF00D233A01D900048FDC /* JwUUID.h */,
+				C8DFF014233A01D900048FDC /* JwUUID.m */,
+			);
+			path = Exten;
+			sourceTree = "<group>";
+		};
+		C8DFF01B233A01D900048FDC /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF022233A01DA00048FDC /* JwButton.h */,
+				C8DFF01D233A01D900048FDC /* JwButton.m */,
+				C8DFF020233A01D900048FDC /* JwCollectionGestureView.h */,
+				C8DFF024233A01DA00048FDC /* JwCollectionGestureView.m */,
+				C8DFF025233A01DA00048FDC /* JwImageView.h */,
+				C8DFF01F233A01D900048FDC /* JwImageView.m */,
+				C8DFF026233A01DA00048FDC /* JwReusableLayer.h */,
+				C8DFF01E233A01D900048FDC /* JwReusableLayer.m */,
+				C8DFF01C233A01D900048FDC /* JwTableGestureView.h */,
+				C8DFF023233A01DA00048FDC /* JwTableGestureView.m */,
+				C8DFF021233A01D900048FDC /* JwView.h */,
+				C8DFF027233A01DA00048FDC /* JwView.m */,
+			);
+			path = Kit;
+			sourceTree = "<group>";
+		};
+		C8DFF028233A01DA00048FDC /* Cate */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF03A233A01DA00048FDC /* NSString+JwCate.h */,
+				C8DFF02F233A01DA00048FDC /* NSString+JwCate.m */,
+				C8DFF02B233A01DA00048FDC /* UIBarButtonItem+JwCate.h */,
+				C8DFF037233A01DA00048FDC /* UIBarButtonItem+JwCate.m */,
+				C8DFF029233A01DA00048FDC /* UIColor+JwCate.h */,
+				C8DFF038233A01DA00048FDC /* UIColor+JwCate.m */,
+				C8DFF040233A01DA00048FDC /* UIImage+JwCate.h */,
+				C8DFF031233A01DA00048FDC /* UIImage+JwCate.m */,
+				C8DFF03E233A01DA00048FDC /* UIImageView+JwCate.h */,
+				C8DFF034233A01DA00048FDC /* UIImageView+JwCate.m */,
+				C8DFF03F233A01DA00048FDC /* UILabel+JwCate.h */,
+				C8DFF033233A01DA00048FDC /* UILabel+JwCate.m */,
+				C8DFF02A233A01DA00048FDC /* UINavigationController+JwCate.h */,
+				C8DFF039233A01DA00048FDC /* UINavigationController+JwCate.m */,
+				C8DFF036233A01DA00048FDC /* UIScrollView+JwRefresh.h */,
+				C8DFF043233A01DA00048FDC /* UIScrollView+JwRefresh.m */,
+				C8DFF03C233A01DA00048FDC /* UITextField+JwCate.h */,
+				C8DFF02D233A01DA00048FDC /* UITextField+JwCate.m */,
+				C8DFF02E233A01DA00048FDC /* UIView+Gradient.h */,
+				C8DFF03B233A01DA00048FDC /* UIView+Gradient.m */,
+				C8DFF035233A01DA00048FDC /* UIView+JwCate.h */,
+				C8DFF044233A01DA00048FDC /* UIView+JwCate.m */,
+				C8DFF042233A01DA00048FDC /* UIView+JwDefault.h */,
+				C8DFF030233A01DA00048FDC /* UIView+JwDefault.m */,
+				C8DFF02C233A01DA00048FDC /* UIView+JwNib.h */,
+				C8DFF03D233A01DA00048FDC /* UIView+JwNib.m */,
+				C8DFF032233A01DA00048FDC /* UIViewController+JwCate.h */,
+				C8DFF041233A01DA00048FDC /* UIViewController+JwCate.m */,
+			);
+			path = Cate;
+			sourceTree = "<group>";
+		};
+		C8DFF061233A01E800048FDC /* General */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF062233A01E800048FDC /* Localize */,
+				C8DFF065233A01E800048FDC /* Manager */,
+				C8DFF06D233A01E800048FDC /* Service */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		C8DFF062233A01E800048FDC /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF063233A01E800048FDC /* JwLocalCenter.h */,
+				C8DFF064233A01E800048FDC /* JwLocalCenter.m */,
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
+		C8DFF065233A01E800048FDC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF067233A01E800048FDC /* JwBaseService.h */,
+				C8DFF069233A01E800048FDC /* JwBaseService.m */,
+				C8DFF068233A01E800048FDC /* JwHttpHelper.h */,
+				C8DFF06C233A01E800048FDC /* JwHttpHelper.m */,
+				C8DFF06A233A01E800048FDC /* JwHttpManager.h */,
+				C8DFF066233A01E800048FDC /* JwHttpManager.m */,
+				C8DFF06B233A01E800048FDC /* JwServiceDefine.h */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		C8DFF06D233A01E800048FDC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF06F233A01E800048FDC /* JwDataService.h */,
+				C8DFF06E233A01E800048FDC /* JwDataService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C8DFF075233A020400048FDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF077233A020400048FDC /* JwProjectModel.h */,
+				C8DFF078233A020400048FDC /* JwProjectModel.m */,
+				C8DFF076233A020400048FDC /* JwUserModel.h */,
+				C8DFF079233A020400048FDC /* JwUserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C8DFF07C233A020B00048FDC /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF080233A020B00048FDC /* AESCipher */,
+				C8DFF07D233A020B00048FDC /* Gradient */,
+				C8DFF097233A020B00048FDC /* JwAmountTextField */,
+				C8DFF0A3233A020B00048FDC /* JwCarouselView */,
+				C8DFF09D233A020B00048FDC /* JwIntroduce */,
+				C8DFF088233A020B00048FDC /* JwiPoneType */,
+				C8DFF0A8233A020B00048FDC /* JwLocationHelper */,
+				C8DFF08B233A020B00048FDC /* JwMenuView */,
+				C8DFF083233A020B00048FDC /* JwShareSDK */,
+				C8DFF09A233A020B00048FDC /* JwStarsProgress */,
+				C8DFF0AB233A020B00048FDC /* TYWaveProgressView */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		C8DFF07D233A020B00048FDC /* Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF07E233A020B00048FDC /* UIView+AZGradient.h */,
+				C8DFF07F233A020B00048FDC /* UIView+AZGradient.m */,
+			);
+			path = Gradient;
+			sourceTree = "<group>";
+		};
+		C8DFF080233A020B00048FDC /* AESCipher */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF082233A020B00048FDC /* AESCipher.h */,
+				C8DFF081233A020B00048FDC /* AESCipher.m */,
+			);
+			path = AESCipher;
+			sourceTree = "<group>";
+		};
+		C8DFF083233A020B00048FDC /* JwShareSDK */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF086233A020B00048FDC /* JwShareHelper.h */,
+				C8DFF084233A020B00048FDC /* JwShareHelper.m */,
+				C8DFF087233A020B00048FDC /* JwShareModel.h */,
+				C8DFF085233A020B00048FDC /* JwShareModel.m */,
+			);
+			path = JwShareSDK;
+			sourceTree = "<group>";
+		};
+		C8DFF088233A020B00048FDC /* JwiPoneType */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF089233A020B00048FDC /* JwiPhoneType.h */,
+				C8DFF08A233A020B00048FDC /* JwiPhoneType.m */,
+			);
+			path = JwiPoneType;
+			sourceTree = "<group>";
+		};
+		C8DFF08B233A020B00048FDC /* JwMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF08C233A020B00048FDC /* Apply */,
+				C8DFF094233A020B00048FDC /* JwMenuItem.h */,
+				C8DFF096233A020B00048FDC /* JwMenuItem.m */,
+				C8DFF093233A020B00048FDC /* JwMenuView.h */,
+				C8DFF095233A020B00048FDC /* JwMenuView.m */,
+			);
+			path = JwMenuView;
+			sourceTree = "<group>";
+		};
+		C8DFF08C233A020B00048FDC /* Apply */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF08E233A020B00048FDC /* JwMenuTextItem.h */,
+				C8DFF091233A020B00048FDC /* JwMenuTextItem.m */,
+				C8DFF090233A020B00048FDC /* JwMenuViewCell.h */,
+				C8DFF08D233A020B00048FDC /* JwMenuViewCell.m */,
+				C8DFF092233A020B00048FDC /* JwMenuViewController.h */,
+				C8DFF08F233A020B00048FDC /* JwMenuViewController.m */,
+			);
+			path = Apply;
+			sourceTree = "<group>";
+		};
+		C8DFF097233A020B00048FDC /* JwAmountTextField */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF099233A020B00048FDC /* JwAmountTextField.h */,
+				C8DFF098233A020B00048FDC /* JwAmountTextField.m */,
+			);
+			path = JwAmountTextField;
+			sourceTree = "<group>";
+		};
+		C8DFF09A233A020B00048FDC /* JwStarsProgress */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF09B233A020B00048FDC /* JwStarsProgress.h */,
+				C8DFF09C233A020B00048FDC /* JwStarsProgress.m */,
+			);
+			path = JwStarsProgress;
+			sourceTree = "<group>";
+		};
+		C8DFF09D233A020B00048FDC /* JwIntroduce */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF09E233A020B00048FDC /* JwIntroDefaultCell.h */,
+				C8DFF0A1233A020B00048FDC /* JwIntroDefaultCell.m */,
+				C8DFF0A0233A020B00048FDC /* JwIntroDefaultCell.xib */,
+				C8DFF09F233A020B00048FDC /* JwIntroduceView.h */,
+				C8DFF0A2233A020B00048FDC /* JwIntroduceView.m */,
+			);
+			path = JwIntroduce;
+			sourceTree = "<group>";
+		};
+		C8DFF0A3233A020B00048FDC /* JwCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0A4233A020B00048FDC /* JwCarouselCell.h */,
+				C8DFF0A6233A020B00048FDC /* JwCarouselCell.m */,
+				C8DFF0A5233A020B00048FDC /* JwCarouselView.h */,
+				C8DFF0A7233A020B00048FDC /* JwCarouselView.m */,
+			);
+			path = JwCarouselView;
+			sourceTree = "<group>";
+		};
+		C8DFF0A8233A020B00048FDC /* JwLocationHelper */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0AA233A020B00048FDC /* JwLocationHelper.h */,
+				C8DFF0A9233A020B00048FDC /* JwLocationHelper.m */,
+			);
+			path = JwLocationHelper;
+			sourceTree = "<group>";
+		};
+		C8DFF0AB233A020B00048FDC /* TYWaveProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0AC233A020B00048FDC /* TYWaterWaveView.h */,
+				C8DFF0AE233A020B00048FDC /* TYWaterWaveView.m */,
+				C8DFF0AF233A020B00048FDC /* TYWaveProgressView.h */,
+				C8DFF0AD233A020B00048FDC /* TYWaveProgressView.m */,
+			);
+			path = TYWaveProgressView;
+			sourceTree = "<group>";
+		};
+		C8DFF0C4233A021400048FDC /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				C8ECA3CD23594EA800F519C6 /* Tools */,
+				C8DFF0E6233A021400048FDC /* Base */,
+				C8DFF0C5233A021400048FDC /* Class */,
+			);
+			path = Frame;
+			sourceTree = "<group>";
+		};
+		C8DFF0C5233A021400048FDC /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0D1233A021400048FDC /* 首页 */,
+				C8DFF0DB233A021400048FDC /* 发现 */,
+				C8DFF0C6233A021400048FDC /* 我的 */,
+				C8F6E6B6233B1381004B1F47 /* 导航控制 */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		C8DFF0C6233A021400048FDC /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0CB233A021400048FDC /* C */,
+				C8DFF0C7233A021400048FDC /* M */,
+				C8DFF0CE233A021400048FDC /* V */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		C8DFF0C7233A021400048FDC /* M */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0CA233A021400048FDC /* JwMineModel.h */,
+				C8DFF0C9233A021400048FDC /* JwMineModel.m */,
+				C8DFF0C8233A021400048FDC /* mine.json */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		C8DFF0CB233A021400048FDC /* C */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0CC233A021400048FDC /* JwMineController.h */,
+				C8DFF0CD233A021400048FDC /* JwMineController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		C8DFF0CE233A021400048FDC /* V */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0CF233A021400048FDC /* JwMineCell.h */,
+				C8DFF0D0233A021400048FDC /* JwMineCell.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		C8DFF0D1233A021400048FDC /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0D5233A021400048FDC /* C */,
+				C8DFF0D2233A021400048FDC /* M */,
+				C8DFF0D8233A021400048FDC /* V */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		C8DFF0D2233A021400048FDC /* M */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0D4233A021400048FDC /* JwClassifyModel.h */,
+				C8DFF0D3233A021400048FDC /* JwClassifyModel.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		C8DFF0D5233A021400048FDC /* C */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0D6233A021400048FDC /* JwHomeController.h */,
+				C8DFF0D7233A021400048FDC /* JwHomeController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		C8DFF0D8233A021400048FDC /* V */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0D9233A021400048FDC /* JwClassifyCell.h */,
+				C8DFF0DA233A021400048FDC /* JwClassifyCell.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		C8DFF0DB233A021400048FDC /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0E0233A021400048FDC /* C */,
+				C8DFF0DC233A021400048FDC /* M */,
+				C8DFF0E3233A021400048FDC /* V */,
+			);
+			path = "发现";
+			sourceTree = "<group>";
+		};
+		C8DFF0DC233A021400048FDC /* M */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0DF233A021400048FDC /* JwFineModel.h */,
+				C8DFF0DE233A021400048FDC /* JwFineModel.m */,
+				C8DFF0DD233A021400048FDC /* subs.json */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		C8DFF0E0233A021400048FDC /* C */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0E2233A021400048FDC /* JwFindController.h */,
+				C8DFF0E1233A021400048FDC /* JwFindController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		C8DFF0E3233A021400048FDC /* V */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0E4233A021400048FDC /* JwFindCell.h */,
+				C8DFF0E5233A021400048FDC /* JwFindCell.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		C8DFF0E6233A021400048FDC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0EC233A021400048FDC /* C */,
+				C8DFF0E7233A021400048FDC /* M */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C8DFF0E7233A021400048FDC /* M */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0E8233A021400048FDC /* JwBaseModel.h */,
+				C8DFF0EA233A021400048FDC /* JwBaseModel.m */,
+				C8DFF0EB233A021400048FDC /* JwBaseProjectModel.h */,
+				C8DFF0E9233A021400048FDC /* JwBaseProjectModel.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		C8DFF0EC233A021400048FDC /* C */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF0F1233A021400048FDC /* JwBaseBackController.h */,
+				C8DFF0F5233A021400048FDC /* JwBaseBackController.m */,
+				C8DFF0F4233A021400048FDC /* JwBaseMenuController.h */,
+				C8DFF0EE233A021400048FDC /* JwBaseMenuController.m */,
+				C8DFF0F0233A021400048FDC /* JwBaseViewController.h */,
+				C8DFF0F6233A021400048FDC /* JwBaseViewController.m */,
+				C8DFF0F2233A021400048FDC /* JwNavigationController.h */,
+				C8DFF0ED233A021400048FDC /* JwNavigationController.m */,
+				C8DFF0F3233A021400048FDC /* JwTabBarController.h */,
+				C8DFF0EF233A021400048FDC /* JwTabBarController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		C8ECA3CD23594EA800F519C6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C8ECA3CE23594EB700F519C6 /* Jump */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C8ECA3CE23594EB700F519C6 /* Jump */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Jump;
+			sourceTree = "<group>";
+		};
+		C8F6E6B6233B1381004B1F47 /* 导航控制 */ = {
+			isa = PBXGroup;
+			children = (
+				C8F6E6B7233B141C004B1F47 /* JwNavAnimController.h */,
+				C8F6E6B8233B141C004B1F47 /* JwNavAnimController.m */,
+			);
+			path = "导航控制";
+			sourceTree = "<group>";
+		};
+		EC9F6A79B58979758AE1821C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E5D5F0192B3A68024888D29 /* libPods-JwCompose.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8DFEFE52339FADA00048FDC /* JwCompose */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8DFEFFF2339FADD00048FDC /* Build configuration list for PBXNativeTarget "JwCompose" */;
+			buildPhases = (
+				58DEBAA87902A8367C7B11B9 /* [CP] Check Pods Manifest.lock */,
+				C8DFEFE22339FADA00048FDC /* Sources */,
+				C8DFEFE32339FADA00048FDC /* Frameworks */,
+				C8DFEFE42339FADA00048FDC /* Resources */,
+				49745ACA470BFDAEA73EEC98 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JwCompose;
+			productName = JwCompose;
+			productReference = C8DFEFE62339FADA00048FDC /* JwCompose.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8DFEFDE2339FADA00048FDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Jw;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "陈警卫";
+				TargetAttributes = {
+					C8DFEFE52339FADA00048FDC = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = C8DFEFE12339FADA00048FDC /* Build configuration list for PBXProject "JwCompose" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8DFEFDD2339FADA00048FDC;
+			productRefGroup = C8DFEFE72339FADA00048FDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8DFEFE52339FADA00048FDC /* JwCompose */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8DFEFE42339FADA00048FDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8DFF0FE233A021400048FDC /* subs.json in Resources */,
+				C8DFF0BC233A020B00048FDC /* JwIntroDefaultCell.xib in Resources */,
+				C8DFEFF92339FADD00048FDC /* LaunchScreen.storyboard in Resources */,
+				C8DFF0F7233A021400048FDC /* mine.json in Resources */,
+				C8DFEFF62339FADD00048FDC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49745ACA470BFDAEA73EEC98 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JwCompose/Pods-JwCompose-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JwCompose/Pods-JwCompose-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JwCompose/Pods-JwCompose-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58DEBAA87902A8367C7B11B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JwCompose-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8DFEFE22339FADA00048FDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8DFF105233A021400048FDC /* JwBaseMenuController.m in Sources */,
+				C8DFF0C0233A020B00048FDC /* JwCarouselView.m in Sources */,
+				C8DFF051233A01DA00048FDC /* JwCollectionGestureView.m in Sources */,
+				C8DFF045233A01DA00048FDC /* JwProgressHelper.m in Sources */,
+				C8DFF055233A01DA00048FDC /* UIView+JwDefault.m in Sources */,
+				C8DFF0F8233A021400048FDC /* JwMineModel.m in Sources */,
+				C8DFF04E233A01DA00048FDC /* JwReusableLayer.m in Sources */,
+				C8DFF058233A01DA00048FDC /* UIImageView+JwCate.m in Sources */,
+				C8DFF054233A01DA00048FDC /* NSString+JwCate.m in Sources */,
+				C8DFF0B6233A020B00048FDC /* JwMenuViewController.m in Sources */,
+				C8DFF071233A01E900048FDC /* JwHttpManager.m in Sources */,
+				C8DFF074233A01E900048FDC /* JwDataService.m in Sources */,
+				C8DFF056233A01DA00048FDC /* UIImage+JwCate.m in Sources */,
+				C8DFF057233A01DA00048FDC /* UILabel+JwCate.m in Sources */,
+				C8DFF106233A021400048FDC /* JwTabBarController.m in Sources */,
+				C8DFF0B5233A020B00048FDC /* JwMenuViewCell.m in Sources */,
+				C8DFF0042339FBE700048FDC /* AppDelegate.m in Sources */,
+				C8DFF05A233A01DA00048FDC /* UIColor+JwCate.m in Sources */,
+				C8DFF0B3233A020B00048FDC /* JwShareModel.m in Sources */,
+				C8DFF049233A01DA00048FDC /* JwJailBreak.m in Sources */,
+				C8DFF108233A021400048FDC /* JwBaseViewController.m in Sources */,
+				C8DFF04C233A01DA00048FDC /* JwUUID.m in Sources */,
+				C8DFEFFC2339FADD00048FDC /* main.m in Sources */,
+				C8DFF048233A01DA00048FDC /* JwSavedPhotos.m in Sources */,
+				C8DFF05C233A01DA00048FDC /* UIView+Gradient.m in Sources */,
+				C8DFF0B7233A020B00048FDC /* JwMenuTextItem.m in Sources */,
+				C8DFF05F233A01DA00048FDC /* UIScrollView+JwRefresh.m in Sources */,
+				C8DFF0BE233A020B00048FDC /* JwIntroduceView.m in Sources */,
+				C8DFF04B233A01DA00048FDC /* JwDIYHeader.m in Sources */,
+				C8DFF107233A021400048FDC /* JwBaseBackController.m in Sources */,
+				C8DFF059233A01DA00048FDC /* UIBarButtonItem+JwCate.m in Sources */,
+				C8DFF0F9233A021400048FDC /* JwMineController.m in Sources */,
+				C8DFF05B233A01DA00048FDC /* UINavigationController+JwCate.m in Sources */,
+				C8DFF102233A021400048FDC /* JwBaseProjectModel.m in Sources */,
+				C8DFF04F233A01DA00048FDC /* JwImageView.m in Sources */,
+				C8DFF0B8233A020B00048FDC /* JwMenuView.m in Sources */,
+				C8DFF100233A021400048FDC /* JwFindController.m in Sources */,
+				C8DFF0FF233A021400048FDC /* JwFineModel.m in Sources */,
+				C8DFF0C2233A020B00048FDC /* TYWaveProgressView.m in Sources */,
+				C8DFF0B2233A020B00048FDC /* JwShareHelper.m in Sources */,
+				C8DFF0FA233A021400048FDC /* JwMineCell.m in Sources */,
+				C8DFF0BA233A020B00048FDC /* JwAmountTextField.m in Sources */,
+				C8DFF04A233A01DA00048FDC /* JwPlaceholderView.m in Sources */,
+				C8DFF05D233A01DA00048FDC /* UIView+JwNib.m in Sources */,
+				C8DFF104233A021400048FDC /* JwNavigationController.m in Sources */,
+				C8DFF0B1233A020B00048FDC /* AESCipher.m in Sources */,
+				C8DFF101233A021400048FDC /* JwFindCell.m in Sources */,
+				C8DFF07B233A020400048FDC /* JwUserModel.m in Sources */,
+				C8DFF0BB233A020B00048FDC /* JwStarsProgress.m in Sources */,
+				C8DFF050233A01DA00048FDC /* JwTableGestureView.m in Sources */,
+				C8DFF073233A01E900048FDC /* JwHttpHelper.m in Sources */,
+				C8DFF04D233A01DA00048FDC /* JwButton.m in Sources */,
+				C8DFF0BD233A020B00048FDC /* JwIntroDefaultCell.m in Sources */,
+				C8DFF046233A01DA00048FDC /* JwCommon.m in Sources */,
+				C8DFF0C3233A020B00048FDC /* TYWaterWaveView.m in Sources */,
+				C8DFF07A233A020400048FDC /* JwProjectModel.m in Sources */,
+				C8F6E6B9233B141C004B1F47 /* JwNavAnimController.m in Sources */,
+				C8DFF047233A01DA00048FDC /* JwRegular.m in Sources */,
+				C8DFF0FC233A021400048FDC /* JwHomeController.m in Sources */,
+				C8DFF103233A021400048FDC /* JwBaseModel.m in Sources */,
+				C8DFF0FB233A021400048FDC /* JwClassifyModel.m in Sources */,
+				C8DFF0B0233A020B00048FDC /* UIView+AZGradient.m in Sources */,
+				C8DFF052233A01DA00048FDC /* JwView.m in Sources */,
+				C8DFF05E233A01DA00048FDC /* UIViewController+JwCate.m in Sources */,
+				C8DFF0B4233A020B00048FDC /* JwiPhoneType.m in Sources */,
+				C8DFF0C1233A020B00048FDC /* JwLocationHelper.m in Sources */,
+				C8DFF070233A01E900048FDC /* JwLocalCenter.m in Sources */,
+				C8DFF0FD233A021400048FDC /* JwClassifyCell.m in Sources */,
+				C8DFF0B9233A020B00048FDC /* JwMenuItem.m in Sources */,
+				C8DFF060233A01DA00048FDC /* UIView+JwCate.m in Sources */,
+				C8DFF053233A01DA00048FDC /* UITextField+JwCate.m in Sources */,
+				C8DFF0BF233A020B00048FDC /* JwCarouselCell.m in Sources */,
+				C8DFF072233A01E900048FDC /* JwBaseService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C8DFEFF72339FADD00048FDC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8DFEFF82339FADD00048FDC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C8DFEFFD2339FADD00048FDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C8DFEFFE2339FADD00048FDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8DFF0002339FADD00048FDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD2828D5769D549FB01D6015 /* Pods-JwCompose.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2SMUD7B7U3;
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = JwCompose/Macro/JwQuote.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/JwCompose/App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chenjw.JwCompose;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C8DFF0012339FADD00048FDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91F62C968F9115AD38408471 /* Pods-JwCompose.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2SMUD7B7U3;
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = JwCompose/Macro/JwQuote.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/JwCompose/App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chenjw.JwCompose;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8DFEFE12339FADA00048FDC /* Build configuration list for PBXProject "JwCompose" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8DFEFFD2339FADD00048FDC /* Debug */,
+				C8DFEFFE2339FADD00048FDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8DFEFFF2339FADD00048FDC /* Build configuration list for PBXNativeTarget "JwCompose" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8DFF0002339FADD00048FDC /* Debug */,
+				C8DFF0012339FADD00048FDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8DFEFDE2339FADA00048FDC /* Project object */;
+}

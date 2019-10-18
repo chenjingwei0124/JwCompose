@@ -1,0 +1,61 @@
+//
+//  JwMenuView.h
+//  Purchase_iOS
+//
+//  Created by 陈警卫 on 2018/9/5.
+//  Copyright © 2018年 陈警卫. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "JwMenuItem.h"
+
+@class JwMenuView;
+
+typedef NS_ENUM(NSInteger, JwMenuViewScrollDirection) {
+    JwMenuViewScrollDirectionVertical,//竖直
+    JwMenuViewScrollDirectionHorizontal//水平
+};
+
+@protocol JwMenuViewDelegate<NSObject>
+
+- (void)menuView:(JwMenuView *)menuView didiSelectAtIndex:(NSInteger)index data:(id)data;
+
+@end
+
+@protocol JwMenuViewDataSource<NSObject>
+
+- (JwMenuItem *)menuView:(JwMenuView *)menuView itemForIndex:(NSInteger)index;
+
+@end
+
+@interface JwMenuView : UIView
+
+@property (nonatomic, weak) id <JwMenuViewDataSource> dataSource;
+@property (nonatomic, weak) id <JwMenuViewDelegate> delegate;
+//方向
+@property (nonatomic, assign) JwMenuViewScrollDirection scrollDirection;
+//是否显示滚动条
+@property (nonatomic, assign) BOOL isShowProgress;
+//滚动条颜色
+@property (nonatomic, strong) UIColor *progressColor;
+//数据源
+@property (nonatomic, strong) NSArray *datas;
+//item间隔
+@property (nonatomic, assign) CGFloat spaceItem;
+//是否滚动
+@property (nonatomic, assign) BOOL isScroll;
+//是否均分
+@property (nonatomic, assign) BOOL isAverage;
+//是否显示间隔线
+@property (nonatomic, assign) BOOL isSpaceLine;
+//间隔线颜色
+@property (nonatomic, strong) UIColor *spaceLineColor;
+
+
+- (void)reloadData;
+
+- (void)setValueWithOffset:(CGFloat)offset width:(CGFloat)width count:(NSInteger)count;
+
+- (void)setValue:(CGFloat)value fromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex;
+
+@end

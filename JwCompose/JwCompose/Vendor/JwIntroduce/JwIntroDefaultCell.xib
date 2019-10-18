@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JwIntroDefaultCell">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="602"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="602"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro_0" translatesAutoresizingMaskIntoConstraints="NO" id="UcL-9A-TJb">
+                        <rect key="frame" x="40" y="70" width="298" height="412"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOi-ZZ-Q9G">
+                        <rect key="frame" x="92.5" y="492" width="193" height="45"/>
+                        <state key="normal" backgroundImage="intro_btn"/>
+                        <connections>
+                            <action selector="nowBAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="xu1-T6-mzZ"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UcL-9A-TJb" secondAttribute="bottom" constant="120" id="Iaf-KZ-aoE"/>
+                <constraint firstItem="BOi-ZZ-Q9G" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="P1O-pA-lCC"/>
+                <constraint firstItem="BOi-ZZ-Q9G" firstAttribute="top" secondItem="UcL-9A-TJb" secondAttribute="bottom" constant="10" id="Sgq-zW-rEI"/>
+                <constraint firstItem="UcL-9A-TJb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="40" id="aQl-mb-duH"/>
+                <constraint firstItem="UcL-9A-TJb" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="k6e-67-7cl"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UcL-9A-TJb" secondAttribute="trailing" constant="40" id="p89-w4-vQo"/>
+                <constraint firstItem="UcL-9A-TJb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="70" id="se9-HS-Rv0"/>
+            </constraints>
+            <size key="customSize" width="378" height="602"/>
+            <connections>
+                <outlet property="imageView" destination="UcL-9A-TJb" id="2WE-iy-sVT"/>
+                <outlet property="nowB" destination="BOi-ZZ-Q9G" id="0J5-OX-gpj"/>
+            </connections>
+            <point key="canvasLocation" x="-77" y="17"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="intro_0" width="299" height="538"/>
+        <image name="intro_btn" width="193" height="45"/>
+    </resources>
+</document>
