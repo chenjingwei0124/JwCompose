@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *jw_identifier;
 @property (nonatomic, assign) NSInteger jw_index;
+@property (nonatomic, strong) id jw_data;
 
 @end
 
