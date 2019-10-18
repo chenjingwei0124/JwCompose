@@ -10,7 +10,7 @@
 
 @implementation UIViewController (JwCate)
 
-- (UIViewController *)jw_viewControllerWithClassString:(NSString *)classString{
+- (UIViewController *)jw_viewControllerForNavigationControllersWithClassString:(NSString *)classString{
     for (UIViewController *controller in self.navigationController.viewControllers) {
         if ([controller isKindOfClass:NSClassFromString(classString)]) {
             return controller;

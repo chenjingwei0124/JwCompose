@@ -10,6 +10,6 @@
 
 @interface UIViewController (JwCate)
 
-- (UIViewController *)jw_viewControllerWithClassString:(NSString *)classString;
+- (UIViewController *)jw_viewControllerForNavigationControllersWithClassString:(NSString *)classString;
 
 @end

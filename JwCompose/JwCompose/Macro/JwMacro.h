@@ -104,6 +104,11 @@ return instance; \
 #define JwColorHexString(h) [UIColor jw_colorWithHexString:(h)]
 #define JwColorHexAString(h, a) [UIColor jw_colorWithHexString:(h) alpha:(a)]
 
+/** window的跟控制器 JwTabBarController */
+#define kJwRootTabBarVC ((JwTabBarController *)[[UIApplication sharedApplication] keyWindow].rootViewController)
+/** tabbarVC的选择控制器 JwNavigationController */
+#define kJwRootNavigationVC ((JwNavigationController *)kJwRootTabBarVC.selectedViewController)
+
 
 #pragma mark - 方法
 //CG_INLINE BOOL

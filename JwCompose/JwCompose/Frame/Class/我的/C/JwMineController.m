@@ -26,6 +26,9 @@
     // Do any additional setup after loading the view.
     
     //[self setupTest];
+    NSLog(@"%@", kJwRootTabBarVC);
+    NSLog(@"%@", kJwRootNavigationVC);
+    
     [self setupView];
     [self setupData];
 }
