@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>0</key>
+	<dict>
+		<key>desc</key>
+		<string>空白界面</string>
+		<key>name</key>
+		<string>JwBaseBackController</string>
+	</dict>
+	<key>1</key>
+	<dict>
+		<key>desc</key>
+		<string>导航状态控制</string>
+		<key>name</key>
+		<string>JwNavAnimController</string>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>desc</key>
+		<string>菜单栏的使用</string>
+		<key>name</key>
+		<string>JwMenuDemoController</string>
+	</dict>
+	<key>3</key>
+	<dict>
+		<key>desc</key>
+		<string>页面跳转路由</string>
+		<key>name</key>
+		<string>JwBaseBackController</string>
+	</dict>
+</dict>
+</plist>

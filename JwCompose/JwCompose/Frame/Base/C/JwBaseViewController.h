@@ -18,7 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JwBaseViewController : UIViewController
 
+/** 导航栏状态 */
 @property (nonatomic, assign) JwNavigationBarStyle jw_navigationBarStyle;
+/** 跳转参数 */
+@property (nonatomic, strong) JwJumpModel *jumpModel;
 
 @end
 

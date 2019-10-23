@@ -11,7 +11,6 @@
 @implementation UINavigationController (JwCate)
 /**
  当前导航控制器
- 
  @return 导航控制器
  */
 + (UINavigationController *)jw_currentNC{
@@ -22,8 +21,9 @@
     return [self jw_getCurrentNCFrom:rootViewController];
 }
 
-//递归
+/** 当前导航控制器 */
 + (UINavigationController *)jw_getCurrentNCFrom:(UIViewController *)vc{
+    //递归
     if ([vc isKindOfClass:[UITabBarController class]]) {
         
         UINavigationController *nc = ((UITabBarController *)vc).selectedViewController;

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3D811A90B0E66E9177C4628D /* libPods-JwCompose.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5D5F0192B3A68024888D29 /* libPods-JwCompose.a */; };
+		C8229884235F03D900031F5A /* JwJumpRoute.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8229883235F03D900031F5A /* JwJumpRoute.plist */; };
+		C8229888235FEFC500031F5A /* JwMenuDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8229887235FEFC500031F5A /* JwMenuDemoController.m */; };
+		C85744C1235D9E2D004620F5 /* JwJumpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C85744C0235D9E2D004620F5 /* JwJumpHelper.m */; };
+		C85744C4235D9EF7004620F5 /* JwJumpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C85744C3235D9EF7004620F5 /* JwJumpModel.m */; };
 		C8DFEFF62339FADD00048FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DFEFF52339FADD00048FDC /* Assets.xcassets */; };
 		C8DFEFF92339FADD00048FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8DFEFF72339FADD00048FDC /* LaunchScreen.storyboard */; };
 		C8DFEFFC2339FADD00048FDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFEFFB2339FADD00048FDC /* main.m */; };
@@ -85,6 +89,7 @@
 		C8DFF106233A021400048FDC /* JwTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0EF233A021400048FDC /* JwTabBarController.m */; };
 		C8DFF107233A021400048FDC /* JwBaseBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0F5233A021400048FDC /* JwBaseBackController.m */; };
 		C8DFF108233A021400048FDC /* JwBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0F6233A021400048FDC /* JwBaseViewController.m */; };
+		C8ECA3D22359958200F519C6 /* JwGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8ECA3D12359958200F519C6 /* JwGraphViewController.m */; };
 		C8F6E6B9233B141C004B1F47 /* JwNavAnimController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F6E6B8233B141C004B1F47 /* JwNavAnimController.m */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +97,13 @@
 		8E5D5F0192B3A68024888D29 /* libPods-JwCompose.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JwCompose.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F62C968F9115AD38408471 /* Pods-JwCompose.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JwCompose.release.xcconfig"; path = "Target Support Files/Pods-JwCompose/Pods-JwCompose.release.xcconfig"; sourceTree = "<group>"; };
 		BD2828D5769D549FB01D6015 /* Pods-JwCompose.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JwCompose.debug.xcconfig"; path = "Target Support Files/Pods-JwCompose/Pods-JwCompose.debug.xcconfig"; sourceTree = "<group>"; };
+		C8229883235F03D900031F5A /* JwJumpRoute.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JwJumpRoute.plist; sourceTree = "<group>"; };
+		C8229886235FEFC500031F5A /* JwMenuDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwMenuDemoController.h; sourceTree = "<group>"; };
+		C8229887235FEFC500031F5A /* JwMenuDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwMenuDemoController.m; sourceTree = "<group>"; };
+		C85744BF235D9E2D004620F5 /* JwJumpHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwJumpHelper.h; sourceTree = "<group>"; };
+		C85744C0235D9E2D004620F5 /* JwJumpHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwJumpHelper.m; sourceTree = "<group>"; };
+		C85744C2235D9EF7004620F5 /* JwJumpModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwJumpModel.h; sourceTree = "<group>"; };
+		C85744C3235D9EF7004620F5 /* JwJumpModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwJumpModel.m; sourceTree = "<group>"; };
 		C8DFEFE62339FADA00048FDC /* JwCompose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JwCompose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DFEFF52339FADD00048FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8DFEFF82339FADD00048FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -245,6 +257,8 @@
 		C8DFF0F4233A021400048FDC /* JwBaseMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwBaseMenuController.h; sourceTree = "<group>"; };
 		C8DFF0F5233A021400048FDC /* JwBaseBackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwBaseBackController.m; sourceTree = "<group>"; };
 		C8DFF0F6233A021400048FDC /* JwBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwBaseViewController.m; sourceTree = "<group>"; };
+		C8ECA3D02359958200F519C6 /* JwGraphViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwGraphViewController.h; sourceTree = "<group>"; };
+		C8ECA3D12359958200F519C6 /* JwGraphViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwGraphViewController.m; sourceTree = "<group>"; };
 		C8F6E6B7233B141C004B1F47 /* JwNavAnimController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwNavAnimController.h; sourceTree = "<group>"; };
 		C8F6E6B8233B141C004B1F47 /* JwNavAnimController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwNavAnimController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -268,6 +282,15 @@
 				91F62C968F9115AD38408471 /* Pods-JwCompose.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C8229885235FEF9B00031F5A /* 菜单栏 */ = {
+			isa = PBXGroup;
+			children = (
+				C8229886235FEFC500031F5A /* JwMenuDemoController.h */,
+				C8229887235FEFC500031F5A /* JwMenuDemoController.m */,
+			);
+			path = "菜单栏";
 			sourceTree = "<group>";
 		};
 		C8DFEFDD2339FADA00048FDC = {
@@ -467,6 +490,7 @@
 		C8DFF07C233A020B00048FDC /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C8ECA3CF2359918800F519C6 /* JwGraphListView */,
 				C8DFF080233A020B00048FDC /* AESCipher */,
 				C8DFF07D233A020B00048FDC /* Gradient */,
 				C8DFF097233A020B00048FDC /* JwAmountTextField */,
@@ -523,11 +547,9 @@
 		C8DFF08B233A020B00048FDC /* JwMenuView */ = {
 			isa = PBXGroup;
 			children = (
+				C8ECA3D42359A8B300F519C6 /* C */,
+				C8ECA3D32359A8A800F519C6 /* V */,
 				C8DFF08C233A020B00048FDC /* Apply */,
-				C8DFF094233A020B00048FDC /* JwMenuItem.h */,
-				C8DFF096233A020B00048FDC /* JwMenuItem.m */,
-				C8DFF093233A020B00048FDC /* JwMenuView.h */,
-				C8DFF095233A020B00048FDC /* JwMenuView.m */,
 			);
 			path = JwMenuView;
 			sourceTree = "<group>";
@@ -622,6 +644,7 @@
 				C8DFF0D1233A021400048FDC /* 首页 */,
 				C8DFF0DB233A021400048FDC /* 发现 */,
 				C8DFF0C6233A021400048FDC /* 我的 */,
+				C8229885235FEF9B00031F5A /* 菜单栏 */,
 				C8F6E6B6233B1381004B1F47 /* 导航控制 */,
 			);
 			path = Class;
@@ -788,8 +811,40 @@
 		C8ECA3CE23594EB700F519C6 /* Jump */ = {
 			isa = PBXGroup;
 			children = (
+				C85744BF235D9E2D004620F5 /* JwJumpHelper.h */,
+				C85744C0235D9E2D004620F5 /* JwJumpHelper.m */,
+				C85744C2235D9EF7004620F5 /* JwJumpModel.h */,
+				C85744C3235D9EF7004620F5 /* JwJumpModel.m */,
+				C8229883235F03D900031F5A /* JwJumpRoute.plist */,
 			);
 			path = Jump;
+			sourceTree = "<group>";
+		};
+		C8ECA3CF2359918800F519C6 /* JwGraphListView */ = {
+			isa = PBXGroup;
+			children = (
+				C8ECA3D02359958200F519C6 /* JwGraphViewController.h */,
+				C8ECA3D12359958200F519C6 /* JwGraphViewController.m */,
+			);
+			path = JwGraphListView;
+			sourceTree = "<group>";
+		};
+		C8ECA3D32359A8A800F519C6 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFF094233A020B00048FDC /* JwMenuItem.h */,
+				C8DFF096233A020B00048FDC /* JwMenuItem.m */,
+				C8DFF093233A020B00048FDC /* JwMenuView.h */,
+				C8DFF095233A020B00048FDC /* JwMenuView.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		C8ECA3D42359A8B300F519C6 /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
 			sourceTree = "<group>";
 		};
 		C8F6E6B6233B1381004B1F47 /* 导航控制 */ = {
@@ -870,6 +925,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8DFF0FE233A021400048FDC /* subs.json in Resources */,
+				C8229884235F03D900031F5A /* JwJumpRoute.plist in Resources */,
 				C8DFF0BC233A020B00048FDC /* JwIntroDefaultCell.xib in Resources */,
 				C8DFEFF92339FADD00048FDC /* LaunchScreen.storyboard in Resources */,
 				C8DFF0F7233A021400048FDC /* mine.json in Resources */,
@@ -932,10 +988,12 @@
 				C8DFF045233A01DA00048FDC /* JwProgressHelper.m in Sources */,
 				C8DFF055233A01DA00048FDC /* UIView+JwDefault.m in Sources */,
 				C8DFF0F8233A021400048FDC /* JwMineModel.m in Sources */,
+				C8229888235FEFC500031F5A /* JwMenuDemoController.m in Sources */,
 				C8DFF04E233A01DA00048FDC /* JwReusableLayer.m in Sources */,
 				C8DFF058233A01DA00048FDC /* UIImageView+JwCate.m in Sources */,
 				C8DFF054233A01DA00048FDC /* NSString+JwCate.m in Sources */,
 				C8DFF0B6233A020B00048FDC /* JwMenuViewController.m in Sources */,
+				C85744C4235D9EF7004620F5 /* JwJumpModel.m in Sources */,
 				C8DFF071233A01E900048FDC /* JwHttpManager.m in Sources */,
 				C8DFF074233A01E900048FDC /* JwDataService.m in Sources */,
 				C8DFF056233A01DA00048FDC /* UIImage+JwCate.m in Sources */,
@@ -963,9 +1021,11 @@
 				C8DFF04F233A01DA00048FDC /* JwImageView.m in Sources */,
 				C8DFF0B8233A020B00048FDC /* JwMenuView.m in Sources */,
 				C8DFF100233A021400048FDC /* JwFindController.m in Sources */,
+				C85744C1235D9E2D004620F5 /* JwJumpHelper.m in Sources */,
 				C8DFF0FF233A021400048FDC /* JwFineModel.m in Sources */,
 				C8DFF0C2233A020B00048FDC /* TYWaveProgressView.m in Sources */,
 				C8DFF0B2233A020B00048FDC /* JwShareHelper.m in Sources */,
+				C8ECA3D22359958200F519C6 /* JwGraphViewController.m in Sources */,
 				C8DFF0FA233A021400048FDC /* JwMineCell.m in Sources */,
 				C8DFF0BA233A020B00048FDC /* JwAmountTextField.m in Sources */,
 				C8DFF04A233A01DA00048FDC /* JwPlaceholderView.m in Sources */,

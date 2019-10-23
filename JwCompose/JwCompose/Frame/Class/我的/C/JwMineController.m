@@ -9,8 +9,6 @@
 #import "JwMineController.h"
 #import "JwMineCell.h"
 #import "JwMineModel.h"
-#import "JwNavAnimController.h"
-#import "JwMenuViewController.h"
 
 @interface JwMineController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -119,18 +117,29 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     JwProjectModel *projectModel = self.datas[indexPath.section];
     JwMineModel *model = projectModel.jw_itemDatas[indexPath.item];
-    if ([model.Id isEqualToString:@"2"]) {
+    
+    if ([model.Id isEqualToString:@"0"]) {
         id hud = [JwProgressHelper showProgressAnimate];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [hud hideAnimated:YES];
         });
-    }else if ([model.Id isEqualToString:@"3"]){
+    } else {
+        JwJumpModel *jumpModel = [[JwJumpModel alloc] init];
+        jumpModel.type = model.Id;
+        [JwJumpHelper jumpHelperWithJumpModel:jumpModel];
+    }
+    
+    /**
+    if ([model.Id isEqualToString:@"1"]){
         JwNavAnimController *vc = [[JwNavAnimController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
-    }else if ([model.Id isEqualToString:@"4"]){
+    }else if ([model.Id isEqualToString:@"2"]){
         JwMenuViewController *vc = [[JwMenuViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if ([model.Id isEqualToString:@"3"]){
+        
     }
+     */
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{

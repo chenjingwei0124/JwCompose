@@ -12,9 +12,11 @@
 
 /**
  当前导航控制器
-
  @return 导航控制器
  */
 + (UINavigationController *)jw_currentNC;
+
+/** 当前导航控制器 */
++ (UINavigationController *)jw_getCurrentNCFrom:(UIViewController *)vc;
 
 @end

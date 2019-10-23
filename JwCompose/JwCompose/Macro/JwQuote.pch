@@ -74,18 +74,19 @@
 #import "UIView+JwNib.h"
 #import "UIViewController+JwCate.h"
 
-//Project
-//Tools
-#import "JwLocalCenter.h"
-#import "JwDataService.h"
 //Model
 #import "JwBaseModel.h"
+#import "JwJumpModel.h"
 //Controller
 #import "JwBaseViewController.h"
 #import "JwBaseBackController.h"
 #import "JwBaseMenuController.h"
 #import "JwNavigationController.h"
 #import "JwTabBarController.h"
+//Tools
+#import "JwLocalCenter.h"
+#import "JwDataService.h"
+#import "JwJumpHelper.h"
 //View
 
 
