@@ -124,6 +124,10 @@
             [hud hideAnimated:YES];
         });
     } else {
+        /**
+         通过数据model来进行页面跳转和参数传递
+         数据路由来源于JwJumpRoute.plist文件
+         */
         JwJumpModel *jumpModel = [[JwJumpModel alloc] init];
         jumpModel.type = model.Id;
         [JwJumpHelper jumpHelperWithJumpModel:jumpModel];

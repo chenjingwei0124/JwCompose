@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JwBaseProjectModel : JwBaseModel
 
-@property (nonatomic, strong) id<Optional> jw_base;//基类数据
-@property (nonatomic, strong) id<Optional> jw_data;//基础数据
+@property (nonatomic, strong) id<Ignore> jw_base;//基类数据
+@property (nonatomic, strong) id<Ignore> jw_data;//基础数据
 @property (nonatomic, strong) NSString *jw_temp;//扩展字段
 
 @property (nonatomic, assign) CGSize jw_cellSize;//显示大小
