@@ -73,7 +73,10 @@
 #import "UIView+JwDefault.h"
 #import "UIView+JwNib.h"
 #import "UIViewController+JwCate.h"
+#import "AppDelegate+JwCate.h"
 
+//Vendor
+#import "JwScreenshot.h"
 //Model
 #import "JwBaseModel.h"
 #import "JwJumpModel.h"

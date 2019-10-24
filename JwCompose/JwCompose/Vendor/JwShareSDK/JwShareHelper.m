@@ -36,7 +36,6 @@
     
     NSMutableDictionary *params = nil;
     params = [self setupPlatformType:platformType contentType:contentType share:share];
-    
     [self shareWithPlatformType:platformType param:params completion:completion];
 }
 
@@ -53,7 +52,7 @@
     }];
 }
 
-/** 分享
+/**
  设置分享参数
  */
 + (NSMutableDictionary *)setupPlatformType:(SSDKPlatformType)platformType
@@ -107,7 +106,8 @@
     }];
 }
 
-/** 分享结果
+/**
+ 分享结果
  */
 + (void)showShareResult:(SSDKResponseState)state
              completion:(void(^)(BOOL success, NSError *error))completion{

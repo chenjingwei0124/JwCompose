@@ -28,7 +28,7 @@
 		<key>desc</key>
 		<string>页面跳转路由</string>
 		<key>name</key>
-		<string>JwBaseBackController</string>
+		<string>JwRouteJumpController</string>
 	</dict>
 </dict>
 </plist>

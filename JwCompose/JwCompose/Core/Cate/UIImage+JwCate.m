@@ -33,12 +33,14 @@
 
 /** view转变成image */
 + (UIImage *)jw_imageWithUIView:(UIView *)view{
-    UIGraphicsBeginImageContext(view.bounds.size);
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    [view.layer renderInContext:ctx];
-    UIImage *tImage = UIGraphicsGetImageFromCurrentImageContext();
+    CGSize imageSize = view.bounds.size;
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    return tImage;
+    
+    NSData *imageData = UIImagePNGRepresentation(image);
+    return [UIImage imageWithData:imageData];
 }
 
 /** 模糊图片 */

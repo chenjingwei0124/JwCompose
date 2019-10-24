@@ -78,9 +78,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)jw_bezierRoundingView:(UIView *)view corners:(UIRectCorner)corners cornerRadius:(NSInteger)cornerRadius rect:(CGRect)rect;
 
 /** 获取跟控制器的Window */
-+ (UIWindow *)jw_catchWindowWithRootViewController;
++ (UIWindow *)jw_catchWindow;
 /** 获取最前的ViewController */
-+ (UIViewController *)jw_catchCurrentViewControllerWithRootViewController:(UIViewController *)rootVC;
++ (UIViewController *)jw_catchCurrentViewControllerWithViewController:(UIViewController *)vc;
 /** 获取当前的ViewController */
 + (UIViewController *)jw_catchCurrentViewController;
 

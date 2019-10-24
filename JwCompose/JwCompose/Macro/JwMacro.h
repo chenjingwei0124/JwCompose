@@ -111,6 +111,11 @@ return instance; \
 
 
 #pragma mark - 方法
+/** 转化成字符串 */
+#define kJwCheckToString(s) [JwCommon jw_stringCheckWithData:s]
+
+
+
 //CG_INLINE BOOL
 //jw_between(CGFloat minimumValue, CGFloat value, CGFloat maximumValue){
 //    return minimumValue < value && value < maximumValue;

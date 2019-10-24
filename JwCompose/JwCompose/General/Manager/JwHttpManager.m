@@ -13,6 +13,7 @@
 @interface JwHttpManager ()
 
 @property (nonatomic, strong) AFHTTPSessionManager *session;
+@property (nonatomic, strong) AFURLSessionManager *URLSession;
 
 @end
 
@@ -123,6 +124,53 @@
         failure(error);
         [JwHttpHelper httpManager:self didResultWithResponse:nil error:error];
     }];
+}
+
+- (NSURLSessionDownloadTask *)downloadWithUrl:(NSString *)url progress:(void (^)(NSProgress *downloadProgress))progress success:(void (^)(NSURL * filePath))success failure:(void (^)(NSError * error))failure{
+    
+    NSURL *URL = [NSURL URLWithString:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    [[NSFileManager defaultManager] removeItemAtPath:cachesPath error:nil];
+    
+    NSURLSessionDownloadTask *task = nil;
+    Weak(task);
+    task = [self.URLSession downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+        //下载进程
+        if (progress) {
+            progress(downloadProgress);
+        }
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        //正在下载
+        NSString *path = [cachesPath stringByAppendingPathComponent:response.suggestedFilename];
+        return [NSURL fileURLWithPath:path];
+        
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        //下载完成
+        if (error) {
+            [wtask cancel];
+            if (failure) {
+                failure(error);
+                [[NSFileManager defaultManager] removeItemAtPath:[filePath path] error:nil];
+            }
+        }else{
+            if (success) {
+                success(filePath);
+            }
+        }
+    }];
+    [task resume];
+    return task;
+}
+
+- (AFURLSessionManager *)URLSession{
+    if (!_URLSession) {
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        AFURLSessionManager *URLSession = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+        _URLSession = URLSession;
+    }
+    return _URLSession;
 }
 
 - (AFHTTPSessionManager *)session{

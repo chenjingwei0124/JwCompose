@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)upload:(NSDictionary *)params url:(NSString *)url imageDictionary:(NSDictionary *)imageDictionary success:(void(^)(id data))success failure:(void(^)(NSError *error))failure;
 
+- (NSURLSessionDownloadTask *)downloadWithUrl:(NSString *)url progress:(void (^)(NSProgress *downloadProgress))progress success:(void (^)(NSURL * filePath))success failure:(void (^)(NSError * error))failure;
+
 @end
 
 NS_ASSUME_NONNULL_END

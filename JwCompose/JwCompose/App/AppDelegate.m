@@ -41,9 +41,32 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     [self showRootController];
-    
     [self initKeyboardManager];
+    [self jw_handleCompose];
     
+    return YES;
+}
+
+/** URL Scheme */
+- (BOOL)application:(UIApplication *)app handleOpenURL:(nonnull NSURL *)url {
+    //iOS2.0 - iOS4.2
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(nonnull NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(nonnull id)annotation {
+    //iOS4.2 - iOS9.0
+    [self jw_handleOpenURL:url];
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    //iOS9.0 -
+    [self jw_handleOpenURL:url];
+    return YES;
+}
+
+/** Universal Link Associated Domains */
+- (BOOL)application:(UIApplication *)application continueUserActivity:(nonnull NSUserActivity *)userActivity restorationHandler:(nonnull void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler{
     return YES;
 }
 
@@ -74,5 +97,35 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+/** URL Scheme参数处理 */
+- (void)jw_handleOpenURL:(nonnull NSURL *)url {
+    NSString *urlStr = [url absoluteString];
+    //参数格式 jw.compose://data?xxx=xxx&xxx=xxx
+    if ([urlStr hasPrefix:@"jw.compose://"]) {
+        NSString *paramStr = [urlStr stringByReplacingOccurrencesOfString:@"jw.compose://data?" withString:@""];
+        NSArray *pkvArr = [paramStr componentsSeparatedByString:@"&"];
+        
+        NSMutableDictionary *param = [NSMutableDictionary dictionary];
+        for (NSString *kvStr in pkvArr) {
+            NSArray *kvArr = [kvStr componentsSeparatedByString:@"="];
+            if (kvArr.count > 1) {
+                param[kvArr[0]] = kvArr[1];
+            }
+        }
+        DLog(@"%@", param);
+        JwJumpModel *jumpModel = [[JwJumpModel alloc] init];
+        jumpModel.type = kJwCheckToString(param[@"type"]);
+        jumpModel.params = param;
+        [JwJumpHelper jumpHelperWithJumpModel:jumpModel];
+    }
+}
+
+/** 处理业务 */
+- (void)jw_handleCompose{
+    //截屏观察者
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(jw_userDidTakeScreenshot:)
+                                                 name:UIApplicationUserDidTakeScreenshotNotification object:nil];
+}
 
 @end

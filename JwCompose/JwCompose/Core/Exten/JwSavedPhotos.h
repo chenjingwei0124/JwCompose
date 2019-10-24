@@ -16,7 +16,6 @@
 @property (nonatomic, copy) void(^didDoneOver)(void);
 //批量下载图片
 - (void)jw_downloadImages:(NSArray<NSString *> *)imgsArray completion:(void(^)(NSArray *resultArray))completionBlock;
-
 //批量下载并插入相册 完成时回调didDoneOver
 - (void)jw_setupDownloadSavePhotos:(NSArray *)images;
 

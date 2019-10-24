@@ -9,6 +9,7 @@
 #import "JwMineController.h"
 #import "JwMineCell.h"
 #import "JwMineModel.h"
+#import <LBXScanNative.h>
 
 @interface JwMineController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -119,11 +120,11 @@
     JwMineModel *model = projectModel.jw_itemDatas[indexPath.item];
     
     if ([model.Id isEqualToString:@"0"]) {
-        id hud = [JwProgressHelper showProgressAnimate];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [hud hideAnimated:YES];
-        });
-    } else {
+        [self showLoading];
+    } else if ([model.Id isEqualToString:@"4"]) {
+        [self showScreenshot];
+    }
+    else {
         /**
          通过数据model来进行页面跳转和参数传递
          数据路由来源于JwJumpRoute.plist文件
@@ -177,6 +178,57 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
     return CGSizeZero;
+}
+
+/** 加载Loading */
+- (void)showLoading{
+    id hud = [JwProgressHelper showProgressAnimate];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [hud hideAnimated:YES];
+    });
+}
+
+/** 显示截图 */
+- (void)showScreenshot{
+    Weak(self);
+    [JwScreenshot showScreenshotComplete:^(UIImage * _Nonnull image) {
+        [wself saveScreenshotWithImage:image];
+    }];
+}
+
+/** 保存拼接截图 */
+- (void)saveScreenshotWithImage:(UIImage *)image{
+    CGSize screenSize = kJwScreenSize;
+    UIView *backView = [[UIView alloc] init];
+    backView.backgroundColor = [UIColor whiteColor];
+    backView.size = CGSizeMake(screenSize.width, screenSize.height + 150);
+    
+    UIImageView *ssImageView = [[UIImageView alloc] initWithImage:image];
+    ssImageView.frame = CGRectMake(0, 0, screenSize.width, screenSize.height);
+    [backView addSubview:ssImageView];
+    
+    CGSize qrSize = CGSizeMake(120, 120);
+    NSString *qrStr = @"jw.compose://data?scheme=1&type=3&id=0";
+    UIImage *qrImage = [LBXScanNative createQRWithString:qrStr QRSize:qrSize];
+    UIImageView *qrImageView = [[UIImageView alloc] initWithImage:qrImage];
+    qrImageView.frame = CGRectMake(0, ssImageView.jw_bottom, qrSize.width, qrSize.height);
+    qrImageView.jw_centerX = backView.jw_width * 0.5;
+    [backView addSubview:qrImageView];
+    
+    UILabel *descL = [[UILabel alloc] initWithFrame:(CGRectMake(0, qrImageView.jw_bottom, backView.jw_width, 30))];
+    descL.font = [UIFont systemFontOfSize:13];
+    descL.textAlignment = NSTextAlignmentCenter;
+    descL.textColor = JwColorRandom;
+    descL.numberOfLines = 0;
+    descL.text = @"使用iPhone相机扫描此二维码拉起APP";
+    [backView addSubview:descL];
+    
+    UIImage *saveImage = [UIImage jw_imageWithUIView:backView];
+    JwSavedPhotos *sp = [[JwSavedPhotos alloc] init];
+    [sp jw_setupSavePhotos:@[saveImage]];
+    sp.didDoneOver = ^{
+        [JwProgressHelper showText:@"拼接截图已保存相册"];
+    };
 }
 
 /*

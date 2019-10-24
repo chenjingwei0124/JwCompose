@@ -222,7 +222,7 @@
 }
 
 /** 获取跟控制器的Window */
-+ (UIWindow *)jw_catchWindowWithRootViewController{
++ (UIWindow *)jw_catchWindow{
     UIWindow *window = [UIApplication sharedApplication].delegate.window;
     if (window.windowLevel != UIWindowLevelNormal) {
         NSArray *windows = [UIApplication sharedApplication].windows;
@@ -237,27 +237,27 @@
 }
 
 /** 获取最前的ViewController */
-+ (UIViewController *)jw_catchCurrentViewControllerWithRootViewController:(UIViewController *)rootVC{
++ (UIViewController *)jw_catchCurrentViewControllerWithViewController:(UIViewController *)vc{
     UIViewController *currentVC;
-    if ([rootVC presentedViewController]) {
-        while ([rootVC presentedViewController]) {
-            rootVC = [rootVC presentedViewController];
+    if ([vc presentedViewController]) {
+        while ([vc presentedViewController]) {
+            vc = [vc presentedViewController];
         }
     }
-    if ([rootVC isKindOfClass:[UITabBarController class]]) {
-        currentVC = [self jw_catchCurrentViewControllerWithRootViewController:[(UITabBarController *)rootVC selectedViewController]];
-    } else if ([rootVC isKindOfClass:[UINavigationController class]]){
-        currentVC = [self jw_catchCurrentViewControllerWithRootViewController:[(UINavigationController *)rootVC visibleViewController]];
+    if ([vc isKindOfClass:[UITabBarController class]]) {
+        currentVC = [self jw_catchCurrentViewControllerWithViewController:[(UITabBarController *)vc selectedViewController]];
+    } else if ([vc isKindOfClass:[UINavigationController class]]){
+        currentVC = [self jw_catchCurrentViewControllerWithViewController:[(UINavigationController *)vc visibleViewController]];
     } else {
-        currentVC = rootVC;
+        currentVC = vc;
     }
     return currentVC;
 }
 
 /** 获取当前的ViewController */
 + (UIViewController *)jw_catchCurrentViewController{
-    UIViewController *rootVC = [self jw_catchWindowWithRootViewController].rootViewController;
-    UIViewController *currentVC = [self jw_catchCurrentViewControllerWithRootViewController:rootVC];
+    UIViewController *rootVC = [self jw_catchWindow].rootViewController;
+    UIViewController *currentVC = [self jw_catchCurrentViewControllerWithViewController:rootVC];
     return currentVC;
 }
 
