@@ -14,6 +14,7 @@
 		C822989023617B5C00031F5A /* AppDelegate+JwCate.m in Sources */ = {isa = PBXBuildFile; fileRef = C822988F23617B5C00031F5A /* AppDelegate+JwCate.m */; };
 		C822989523618F2800031F5A /* JwRouteJumpController.m in Sources */ = {isa = PBXBuildFile; fileRef = C822989323618F2800031F5A /* JwRouteJumpController.m */; };
 		C822989623618F2800031F5A /* JwRouteJumpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C822989423618F2800031F5A /* JwRouteJumpController.xib */; };
+		C822989A2366B5D000031F5A /* JwTestAnimController.m in Sources */ = {isa = PBXBuildFile; fileRef = C82298992366B5D000031F5A /* JwTestAnimController.m */; };
 		C85744C1235D9E2D004620F5 /* JwJumpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C85744C0235D9E2D004620F5 /* JwJumpHelper.m */; };
 		C85744C4235D9EF7004620F5 /* JwJumpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C85744C3235D9EF7004620F5 /* JwJumpModel.m */; };
 		C8DFEFF62339FADD00048FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DFEFF52339FADD00048FDC /* Assets.xcassets */; };
@@ -112,6 +113,8 @@
 		C822989223618F2800031F5A /* JwRouteJumpController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwRouteJumpController.h; sourceTree = "<group>"; };
 		C822989323618F2800031F5A /* JwRouteJumpController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwRouteJumpController.m; sourceTree = "<group>"; };
 		C822989423618F2800031F5A /* JwRouteJumpController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JwRouteJumpController.xib; sourceTree = "<group>"; };
+		C82298982366B5D000031F5A /* JwTestAnimController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwTestAnimController.h; sourceTree = "<group>"; };
+		C82298992366B5D000031F5A /* JwTestAnimController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwTestAnimController.m; sourceTree = "<group>"; };
 		C85744BF235D9E2D004620F5 /* JwJumpHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwJumpHelper.h; sourceTree = "<group>"; };
 		C85744C0235D9E2D004620F5 /* JwJumpHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwJumpHelper.m; sourceTree = "<group>"; };
 		C85744C2235D9EF7004620F5 /* JwJumpModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwJumpModel.h; sourceTree = "<group>"; };
@@ -322,6 +325,15 @@
 				C822989423618F2800031F5A /* JwRouteJumpController.xib */,
 			);
 			path = "路由跳转";
+			sourceTree = "<group>";
+		};
+		C82298972366B4DC00031F5A /* 旋转动画 */ = {
+			isa = PBXGroup;
+			children = (
+				C82298982366B5D000031F5A /* JwTestAnimController.h */,
+				C82298992366B5D000031F5A /* JwTestAnimController.m */,
+			);
+			path = "旋转动画";
 			sourceTree = "<group>";
 		};
 		C8DFEFDD2339FADA00048FDC = {
@@ -682,6 +694,7 @@
 				C8229885235FEF9B00031F5A /* 菜单栏 */,
 				C8F6E6B6233B1381004B1F47 /* 导航控制 */,
 				C822989123618F0100031F5A /* 路由跳转 */,
+				C82298972366B4DC00031F5A /* 旋转动画 */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -1020,6 +1033,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8DFF105233A021400048FDC /* JwBaseMenuController.m in Sources */,
+				C822989A2366B5D000031F5A /* JwTestAnimController.m in Sources */,
 				C8DFF0C0233A020B00048FDC /* JwCarouselView.m in Sources */,
 				C822989523618F2800031F5A /* JwRouteJumpController.m in Sources */,
 				C8DFF051233A01DA00048FDC /* JwCollectionGestureView.m in Sources */,

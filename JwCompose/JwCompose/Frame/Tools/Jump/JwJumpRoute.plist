@@ -30,5 +30,12 @@
 		<key>name</key>
 		<string>JwRouteJumpController</string>
 	</dict>
+	<key>5</key>
+	<dict>
+        <key>desc</key>
+        <string>测试动画</string>
+        <key>name</key>
+        <string>JwTestAnimController</string>
+    </dict>
 </dict>
 </plist>
