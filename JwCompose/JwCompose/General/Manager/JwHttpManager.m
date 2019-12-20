@@ -12,7 +12,7 @@
 
 @interface JwHttpManager ()
 
-@property (nonatomic, strong) AFHTTPSessionManager *session;
+@property (nonatomic, strong) AFHTTPSessionManager *HTTPsession;
 @property (nonatomic, strong) AFURLSessionManager *URLSession;
 
 @end
@@ -65,7 +65,7 @@
 - (void)GET:(NSDictionary *)params url:(NSString *)url success:(void (^)(id data))success failure:(void (^)(NSError * error))failure{
     
     DLog(@"%@--%@", url, params);
-    [self.session GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.HTTPsession GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DLog(@"%@--%@", url, responseObject);
@@ -82,7 +82,7 @@
 - (void)POST:(NSDictionary *)params url:(NSString *)url success:(void (^)(id data))success failure:(void (^)(NSError * error))failure{
     
     DLog(@"%@--%@", url, params);
-    [self.session POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+    [self.HTTPsession POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DLog(@"%@--%@", url, responseObject);
@@ -101,7 +101,7 @@
     
     DLog(@"%@--%@", url, params);
     //imageDictionary 必须 imageName : image
-    [self.session POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [self.HTTPsession POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSArray *imageKeys = [imageDictionary allKeys];
         for (NSInteger i = 0; i < imageKeys.count; i++) {
             NSData *data = UIImageJPEGRepresentation(imageDictionary[imageKeys[i]], 0.5);
@@ -173,8 +173,8 @@
     return _URLSession;
 }
 
-- (AFHTTPSessionManager *)session{
-    if (!_session) {
+- (AFHTTPSessionManager *)HTTPsession{
+    if (!_HTTPsession) {
         AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
         session.requestSerializer.timeoutInterval = 15;
         //接收类型
@@ -187,9 +187,9 @@
         //[session setSecurityPolicy:[self customSecurityPolicy]];
         //双向验证
         //[self checkCredential:session];
-        _session = session;
+        _HTTPsession = session;
     }
-    return _session;
+    return _HTTPsession;
 }
 
 - (AFSecurityPolicy *)customSecurityPolicy {

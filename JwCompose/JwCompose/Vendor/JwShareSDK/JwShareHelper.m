@@ -18,12 +18,12 @@
         [platformsRegister setupSinaWeiboWithAppkey:MOBSSDKSinaWeiboAppKey appSecret:MOBSSDKSinaWeiboAppSecret redirectUrl:MOBSSDKSinaWeiboRedirectUri];
 #endif
         
-#if (defined IMPORT_SUB_QQFriend) || (defined IMPORT_SUB_QZone)
+#if defined IMPORT_SUB_QQ
         [platformsRegister setupQQWithAppId:MOBSSDKQQAppID appkey:MOBSSDKQQAppKey];
 #endif
         
-#if (defined IMPORT_SUB_WechatSession) || (defined IMPORT_SUB_WechatTimeline) || (defined IMPORT_SUB_WechatFav)
-        [platformsRegister setupWeChatWithAppId:MOBSSDKWeChatAppID appSecret:nil];
+#if defined IMPORT_SUB_Wechat
+        [platformsRegister setupWeChatWithAppId:MOBSSDKWeChatAppID appSecret:MOBSSDKWeChatAppSecret];
 #endif
     }];
 }

@@ -37,5 +37,13 @@
         <key>name</key>
         <string>JwTestAnimController</string>
     </dict>
+    <key>7</key>
+    <dict>
+        <key>desc</key>
+        <string>WebView</string>
+        <key>name</key>
+        <string>JwWebController</string>
+    </dict>
+    
 </dict>
 </plist>

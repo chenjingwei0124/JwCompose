@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "JwTabBarController.h"
+#import "JwBugly.h"
 
 @interface AppDelegate ()
 
@@ -126,6 +127,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(jw_userDidTakeScreenshot:)
                                                  name:UIApplicationUserDidTakeScreenshotNotification object:nil];
+    //崩溃收集
+    [[[JwBugly alloc] init] setupBugly];
 }
 
 @end

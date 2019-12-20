@@ -15,5 +15,7 @@ ${PODS_ROOT}/ZBarSDK/iphone/res/zbar-helpicons.png
 ${PODS_ROOT}/ZBarSDK/iphone/res/zbar-samples.png
 ${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_QQ.bundle
+${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_SinaWeibo.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_WeChat.bundle
 ${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/Optional/ShareSDKUI.bundle

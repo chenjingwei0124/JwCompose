@@ -35,6 +35,7 @@
 	<array>
 		<string>weixin</string>
 		<string>wechat</string>
+		<string>weixinULAPI</string>
 		<string>sinaweibo</string>
 		<string>sinaweibohd</string>
 		<string>sinaweibosso</string>
@@ -57,13 +58,14 @@
 		<string>mqqwpa</string>
 		<string>mqzone</string>
 		<string>mqqopensdkapiV4</string>
+		<string>mqqopensdkminiapp</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MOBAppKey</key>
-	<string>2b98732a8209f</string>
+	<string>28e93da7ef170</string>
 	<key>MOBAppSecret</key>
-	<string>480944a0ba52394a3ebb77628cd85b38</string>
+	<string>13ec0d8f6ced05ad91a974f4b53d99cc</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -93,12 +95,12 @@
 	<string>App需要您的同意,才能访问麦克风</string>
 	<key>NSMotionUsageDescription</key>
 	<string>App需要您的同意,才能访问运动与健身</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>App需要您的同意,才能保存图文到相册</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>App需要您的同意,才能访问相册</string>
 	<key>NSRemindersUsageDescription</key>
 	<string>App需要您的同意,才能访问提醒事项</string>
-    <key>NSPhotoLibraryAddUsageDescription</key>
-    <string>App需要您的同意,才能保存图文到相册</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -109,6 +111,10 @@
 			<array/>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

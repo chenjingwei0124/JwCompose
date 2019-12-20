@@ -123,6 +123,9 @@
         [self showLoading];
     } else if ([model.Id isEqualToString:@"4"]) {
         [self showScreenshot];
+    } else if ([model.Id isEqualToString:@"6"]) {
+        NSArray *tArr = @[];
+        NSLog(@"%@", tArr[1]);
     }
     else {
         /**

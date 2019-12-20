@@ -61,13 +61,25 @@ pod 'NSDate+TimeAgo'
 pod 'Masonry'
 pod 'pop'
 
+#极光推送
 pod 'JPush'
+#mob分享
 pod 'mob_sharesdk'
 pod 'mob_sharesdk/ShareSDKUI'
 pod 'mob_sharesdk/ShareSDKExtension'
-
+#闭环分享依赖
+pod 'mob_sharesdk/ShareSDKRestoreScene'
+#ShareSDKPlatforms
 pod 'mob_sharesdk/ShareSDKPlatforms/QQ'
+pod 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
 pod 'mob_sharesdk/ShareSDKPlatforms/WeChatFull'
+#mob短信验证
+pod 'mob_smssdk'
+#Crash收集
+pod 'Bugly'
+#友盟分析
+pod 'UMCCommon'
+pod 'UMCAnalytics'
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|

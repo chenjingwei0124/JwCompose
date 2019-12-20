@@ -17,6 +17,24 @@
 		C822989A2366B5D000031F5A /* JwTestAnimController.m in Sources */ = {isa = PBXBuildFile; fileRef = C82298992366B5D000031F5A /* JwTestAnimController.m */; };
 		C85744C1235D9E2D004620F5 /* JwJumpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C85744C0235D9E2D004620F5 /* JwJumpHelper.m */; };
 		C85744C4235D9EF7004620F5 /* JwJumpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C85744C3235D9EF7004620F5 /* JwJumpModel.m */; };
+		C8965EA5236BFB31002E93F8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EA4236BFB30002E93F8 /* libc++.tbd */; };
+		C8965EA7236BFB3A002E93F8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EA6236BFB3A002E93F8 /* libz.tbd */; };
+		C8965EA9236BFB43002E93F8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EA8236BFB43002E93F8 /* libsqlite3.tbd */; };
+		C8965EAB236BFB4F002E93F8 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EAA236BFB4F002E93F8 /* ImageIO.framework */; };
+		C8965EAD236BFB59002E93F8 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EAC236BFB59002E93F8 /* Photos.framework */; };
+		C8965EAF236BFE83002E93F8 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EAE236BFE83002E93F8 /* libicucore.tbd */; };
+		C8965EB1236BFE8E002E93F8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EB0236BFE8E002E93F8 /* MessageUI.framework */; };
+		C8965EB3236BFE96002E93F8 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EB2236BFE96002E93F8 /* JavaScriptCore.framework */; };
+		C8965EB5236BFEB1002E93F8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EB4236BFEB1002E93F8 /* SystemConfiguration.framework */; };
+		C8965EB7236BFEBE002E93F8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EB6236BFEBE002E93F8 /* CoreTelephony.framework */; };
+		C8965EB9236BFEC6002E93F8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EB8236BFEC6002E93F8 /* AdSupport.framework */; };
+		C8965EBB236BFECE002E93F8 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EBA236BFECE002E93F8 /* AddressBook.framework */; };
+		C8965EBD236BFED2002E93F8 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EBC236BFED2002E93F8 /* AddressBookUI.framework */; };
+		C8965EC1236C1278002E93F8 /* JwBugly.m in Sources */ = {isa = PBXBuildFile; fileRef = C8965EC0236C1278002E93F8 /* JwBugly.m */; };
+		C8965EC3236C1ABE002E93F8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EC2236C1ABE002E93F8 /* Security.framework */; };
+		C8965EC5236C3A4B002E93F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8965EC4236C3A4B002E93F8 /* MapKit.framework */; };
+		C8B4BD7C23A8CD7B000964D2 /* JwWeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B4BD7B23A8CD7B000964D2 /* JwWeakScriptMessageDelegate.m */; };
+		C8B4BD7E23A9B935000964D2 /* JSOC.html in Resources */ = {isa = PBXBuildFile; fileRef = C8B4BD7D23A9B935000964D2 /* JSOC.html */; };
 		C8DFEFF62339FADD00048FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DFEFF52339FADD00048FDC /* Assets.xcassets */; };
 		C8DFEFF92339FADD00048FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8DFEFF72339FADD00048FDC /* LaunchScreen.storyboard */; };
 		C8DFEFFC2339FADD00048FDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFEFFB2339FADD00048FDC /* main.m */; };
@@ -96,6 +114,7 @@
 		C8DFF108233A021400048FDC /* JwBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFF0F6233A021400048FDC /* JwBaseViewController.m */; };
 		C8ECA3D22359958200F519C6 /* JwGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8ECA3D12359958200F519C6 /* JwGraphViewController.m */; };
 		C8F6E6B9233B141C004B1F47 /* JwNavAnimController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F6E6B8233B141C004B1F47 /* JwNavAnimController.m */; };
+		C8FC043823A2289D00027456 /* JwWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FC043723A2289D00027456 /* JwWebController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +138,26 @@
 		C85744C0235D9E2D004620F5 /* JwJumpHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwJumpHelper.m; sourceTree = "<group>"; };
 		C85744C2235D9EF7004620F5 /* JwJumpModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwJumpModel.h; sourceTree = "<group>"; };
 		C85744C3235D9EF7004620F5 /* JwJumpModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwJumpModel.m; sourceTree = "<group>"; };
+		C8965EA4236BFB30002E93F8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		C8965EA6236BFB3A002E93F8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C8965EA8236BFB43002E93F8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C8965EAA236BFB4F002E93F8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		C8965EAC236BFB59002E93F8 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		C8965EAE236BFE83002E93F8 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		C8965EB0236BFE8E002E93F8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		C8965EB2236BFE96002E93F8 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		C8965EB4236BFEB1002E93F8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C8965EB6236BFEBE002E93F8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C8965EB8236BFEC6002E93F8 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		C8965EBA236BFECE002E93F8 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		C8965EBC236BFED2002E93F8 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		C8965EBF236C1278002E93F8 /* JwBugly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwBugly.h; sourceTree = "<group>"; };
+		C8965EC0236C1278002E93F8 /* JwBugly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwBugly.m; sourceTree = "<group>"; };
+		C8965EC2236C1ABE002E93F8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C8965EC4236C3A4B002E93F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C8B4BD7A23A8CD7B000964D2 /* JwWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		C8B4BD7B23A8CD7B000964D2 /* JwWeakScriptMessageDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwWeakScriptMessageDelegate.m; sourceTree = "<group>"; };
+		C8B4BD7D23A9B935000964D2 /* JSOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JSOC.html; sourceTree = "<group>"; };
 		C8DFEFE62339FADA00048FDC /* JwCompose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JwCompose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DFEFF52339FADD00048FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8DFEFF82339FADD00048FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -276,6 +315,9 @@
 		C8ECA3D12359958200F519C6 /* JwGraphViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwGraphViewController.m; sourceTree = "<group>"; };
 		C8F6E6B7233B141C004B1F47 /* JwNavAnimController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwNavAnimController.h; sourceTree = "<group>"; };
 		C8F6E6B8233B141C004B1F47 /* JwNavAnimController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwNavAnimController.m; sourceTree = "<group>"; };
+		C8FC043323A21B6400027456 /* JwLeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwLeader.h; sourceTree = "<group>"; };
+		C8FC043623A2289D00027456 /* JwWebController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwWebController.h; sourceTree = "<group>"; };
+		C8FC043723A2289D00027456 /* JwWebController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwWebController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +325,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8965EC3236C1ABE002E93F8 /* Security.framework in Frameworks */,
+				C8965EBD236BFED2002E93F8 /* AddressBookUI.framework in Frameworks */,
+				C8965EC5236C3A4B002E93F8 /* MapKit.framework in Frameworks */,
+				C8965EBB236BFECE002E93F8 /* AddressBook.framework in Frameworks */,
+				C8965EB9236BFEC6002E93F8 /* AdSupport.framework in Frameworks */,
+				C8965EB7236BFEBE002E93F8 /* CoreTelephony.framework in Frameworks */,
+				C8965EB5236BFEB1002E93F8 /* SystemConfiguration.framework in Frameworks */,
+				C8965EA5236BFB31002E93F8 /* libc++.tbd in Frameworks */,
+				C8965EB3236BFE96002E93F8 /* JavaScriptCore.framework in Frameworks */,
+				C8965EB1236BFE8E002E93F8 /* MessageUI.framework in Frameworks */,
+				C8965EAF236BFE83002E93F8 /* libicucore.tbd in Frameworks */,
+				C8965EAD236BFB59002E93F8 /* Photos.framework in Frameworks */,
+				C8965EAB236BFB4F002E93F8 /* ImageIO.framework in Frameworks */,
+				C8965EA9236BFB43002E93F8 /* libsqlite3.tbd in Frameworks */,
+				C8965EA7236BFB3A002E93F8 /* libz.tbd in Frameworks */,
 				3D811A90B0E66E9177C4628D /* libPods-JwCompose.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +393,15 @@
 			path = "旋转动画";
 			sourceTree = "<group>";
 		};
+		C8965EBE236C1260002E93F8 /* JwBugly */ = {
+			isa = PBXGroup;
+			children = (
+				C8965EBF236C1278002E93F8 /* JwBugly.h */,
+				C8965EC0236C1278002E93F8 /* JwBugly.m */,
+			);
+			path = JwBugly;
+			sourceTree = "<group>";
+		};
 		C8DFEFDD2339FADA00048FDC = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				C8DFF007233A011A00048FDC /* JwMacro.h */,
+				C8FC043323A21B6400027456 /* JwLeader.h */,
 				C8DFF008233A011A00048FDC /* JwQuote.pch */,
 			);
 			path = Macro;
@@ -525,8 +592,6 @@
 		C8DFF075233A020400048FDC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C8DFF077233A020400048FDC /* JwProjectModel.h */,
-				C8DFF078233A020400048FDC /* JwProjectModel.m */,
 				C8DFF076233A020400048FDC /* JwUserModel.h */,
 				C8DFF079233A020400048FDC /* JwUserModel.m */,
 			);
@@ -536,6 +601,7 @@
 		C8DFF07C233A020B00048FDC /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C8965EBE236C1260002E93F8 /* JwBugly */,
 				C822988A23616A1F00031F5A /* JwScreenshot */,
 				C8ECA3CF2359918800F519C6 /* JwGraphListView */,
 				C8DFF080233A020B00048FDC /* AESCipher */,
@@ -695,6 +761,7 @@
 				C8F6E6B6233B1381004B1F47 /* 导航控制 */,
 				C822989123618F0100031F5A /* 路由跳转 */,
 				C82298972366B4DC00031F5A /* 旋转动画 */,
+				C8FC043523A2280900027456 /* WebView */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -824,6 +891,8 @@
 		C8DFF0E7233A021400048FDC /* M */ = {
 			isa = PBXGroup;
 			children = (
+				C8DFF077233A020400048FDC /* JwProjectModel.h */,
+				C8DFF078233A020400048FDC /* JwProjectModel.m */,
 				C8DFF0E8233A021400048FDC /* JwBaseModel.h */,
 				C8DFF0EA233A021400048FDC /* JwBaseModel.m */,
 				C8DFF0EB233A021400048FDC /* JwBaseProjectModel.h */,
@@ -905,9 +974,36 @@
 			path = "导航控制";
 			sourceTree = "<group>";
 		};
+		C8FC043523A2280900027456 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				C8B4BD7D23A9B935000964D2 /* JSOC.html */,
+				C8FC043623A2289D00027456 /* JwWebController.h */,
+				C8FC043723A2289D00027456 /* JwWebController.m */,
+				C8B4BD7A23A8CD7B000964D2 /* JwWeakScriptMessageDelegate.h */,
+				C8B4BD7B23A8CD7B000964D2 /* JwWeakScriptMessageDelegate.m */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		EC9F6A79B58979758AE1821C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C8965EC4236C3A4B002E93F8 /* MapKit.framework */,
+				C8965EC2236C1ABE002E93F8 /* Security.framework */,
+				C8965EBC236BFED2002E93F8 /* AddressBookUI.framework */,
+				C8965EBA236BFECE002E93F8 /* AddressBook.framework */,
+				C8965EB8236BFEC6002E93F8 /* AdSupport.framework */,
+				C8965EB6236BFEBE002E93F8 /* CoreTelephony.framework */,
+				C8965EB4236BFEB1002E93F8 /* SystemConfiguration.framework */,
+				C8965EB2236BFE96002E93F8 /* JavaScriptCore.framework */,
+				C8965EB0236BFE8E002E93F8 /* MessageUI.framework */,
+				C8965EAE236BFE83002E93F8 /* libicucore.tbd */,
+				C8965EAC236BFB59002E93F8 /* Photos.framework */,
+				C8965EAA236BFB4F002E93F8 /* ImageIO.framework */,
+				C8965EA8236BFB43002E93F8 /* libsqlite3.tbd */,
+				C8965EA6236BFB3A002E93F8 /* libz.tbd */,
+				C8965EA4236BFB30002E93F8 /* libc++.tbd */,
 				8E5D5F0192B3A68024888D29 /* libPods-JwCompose.a */,
 			);
 			name = Frameworks;
@@ -976,6 +1072,7 @@
 				C8DFF0FE233A021400048FDC /* subs.json in Resources */,
 				C8229884235F03D900031F5A /* JwJumpRoute.plist in Resources */,
 				C822989623618F2800031F5A /* JwRouteJumpController.xib in Resources */,
+				C8B4BD7E23A9B935000964D2 /* JSOC.html in Resources */,
 				C8DFF0BC233A020B00048FDC /* JwIntroDefaultCell.xib in Resources */,
 				C8DFEFF92339FADD00048FDC /* LaunchScreen.storyboard in Resources */,
 				C8DFF0F7233A021400048FDC /* mine.json in Resources */,
@@ -1058,6 +1155,7 @@
 				C8DFF049233A01DA00048FDC /* JwJailBreak.m in Sources */,
 				C8DFF108233A021400048FDC /* JwBaseViewController.m in Sources */,
 				C8DFF04C233A01DA00048FDC /* JwUUID.m in Sources */,
+				C8B4BD7C23A8CD7B000964D2 /* JwWeakScriptMessageDelegate.m in Sources */,
 				C8DFEFFC2339FADD00048FDC /* main.m in Sources */,
 				C8DFF048233A01DA00048FDC /* JwSavedPhotos.m in Sources */,
 				C8DFF05C233A01DA00048FDC /* UIView+Gradient.m in Sources */,
@@ -1094,12 +1192,14 @@
 				C8DFF046233A01DA00048FDC /* JwCommon.m in Sources */,
 				C8DFF0C3233A020B00048FDC /* TYWaterWaveView.m in Sources */,
 				C8DFF07A233A020400048FDC /* JwProjectModel.m in Sources */,
+				C8965EC1236C1278002E93F8 /* JwBugly.m in Sources */,
 				C8F6E6B9233B141C004B1F47 /* JwNavAnimController.m in Sources */,
 				C8DFF047233A01DA00048FDC /* JwRegular.m in Sources */,
 				C822989023617B5C00031F5A /* AppDelegate+JwCate.m in Sources */,
 				C8DFF0FC233A021400048FDC /* JwHomeController.m in Sources */,
 				C8DFF103233A021400048FDC /* JwBaseModel.m in Sources */,
 				C8DFF0FB233A021400048FDC /* JwClassifyModel.m in Sources */,
+				C8FC043823A2289D00027456 /* JwWebController.m in Sources */,
 				C8DFF0B0233A020B00048FDC /* UIView+AZGradient.m in Sources */,
 				C8DFF052233A01DA00048FDC /* JwView.m in Sources */,
 				C8DFF05E233A01DA00048FDC /* UIViewController+JwCate.m in Sources */,

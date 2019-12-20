@@ -12,8 +12,6 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#import "JwMacro.h"
-
 //三方框架
 #import <AFNetworking.h>
 #import <FCUUID.h>
@@ -41,56 +39,7 @@
 #import <YYText.h>
 #import <YYWebImage.h>
 
-//JwKit
-#import "JwView.h"
-#import "JwButton.h"
-#import "JwImageView.h"
-#import "JwReusableLayer.h"
-#import "JwTableGestureView.h"
-#import "JwCollectionGestureView.h"
-
-//JwExten
-#import "JwRegular.h"
-#import "JwSavedPhotos.h"
-#import "JwCommon.h"
-#import "JwJailBreak.h"
-#import "JwProgressHelper.h"
-#import "JwUUID.h"
-#import "JwiPhoneType.h"
-
-//JwCate
-#import "NSString+JwCate.h"
-#import "UIBarButtonItem+JwCate.h"
-#import "UIColor+JwCate.h"
-#import "UIImage+JwCate.h"
-#import "UIImageView+JwCate.h"
-#import "UILabel+JwCate.h"
-#import "UINavigationController+JwCate.h"
-#import "UIScrollView+JwRefresh.h"
-#import "UITextField+JwCate.h"
-#import "UIView+Gradient.h"
-#import "UIView+JwCate.h"
-#import "UIView+JwDefault.h"
-#import "UIView+JwNib.h"
-#import "UIViewController+JwCate.h"
-#import "AppDelegate+JwCate.h"
-
-//Vendor
-#import "JwScreenshot.h"
-//Model
-#import "JwBaseModel.h"
-#import "JwJumpModel.h"
-//Controller
-#import "JwBaseViewController.h"
-#import "JwBaseBackController.h"
-#import "JwBaseMenuController.h"
-#import "JwNavigationController.h"
-#import "JwTabBarController.h"
-//Tools
-#import "JwLocalCenter.h"
-#import "JwDataService.h"
-#import "JwJumpHelper.h"
-//View
-
+//本地文件
+#import "JwLeader.h"
 
 #endif /* JwQuote_pch */

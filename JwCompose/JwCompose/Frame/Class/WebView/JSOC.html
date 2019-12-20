@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+    <title>JSOC</title>
+    <meta charset="utf-8">
+</head>
+
+<style type='text/css'>
+
+</style>
+
+<body>
+
+    <h2 style="text-align:center">JSOC交互测试</h2>
+
+    <p style="text-align:center"> <a href="https://github.com/chenjingwei0124">github主页</a> 通过截获url调用oc</p>
+
+    <p style="text-align:center"> <button id="btn1" type="button" onclick="jsToOcFunc()"> js调用oc </button> </p>
+
+    <p style="text-align:center"> <button id="btn2" type="button" onclick="showAlert()"> oc捕获到html的弹出框 </button> </p>
+
+    <p style="text-align:center"> <button id="btn3" type="button" onclick="changeColor()">测试颜色改变 </button> </p>
+
+    <p style="text-align:center">
+        <div id="colortest" style="text-align:center; background-color: red;">oc调用js改变颜色</div>
+    </p>
+
+    <script type="text/javascript">
+        //js调用oc方法
+        function jsToOcFunc() {
+            window.webkit.messageHandlers.iOSJS.postMessage({"name":"参数", "type":"1"});
+        }
+
+        //html的弹窗
+        function showAlert() {
+            alert("被OC截获到了");
+        }
+
+        //OC调用JS改变背景色
+        function changeColor() {
+            document.getElementById('colortest').style.backgroundColor = randomColor();
+        }
+
+        //随机生成颜色
+        function randomColor() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            return "rgb(" + r + ',' + g + ',' + b + ")";
+        }
+    </script>
+
+</body>
+
+</html>

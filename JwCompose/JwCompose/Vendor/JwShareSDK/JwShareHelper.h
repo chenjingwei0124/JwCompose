@@ -11,11 +11,8 @@
 #import <ShareSDK/ShareSDK.h>
 
 //#define IMPORT_SINA_WEIBO //注释此行则 不开启【 新浪微博 】平台
-//#define IMPORT_SUB_QQFriend //注释此行则 不开启【 QQ好友 】平台
-//#define IMPORT_SUB_QZone //注释此行则 不开启【 QQ空间 】平台
-#define IMPORT_SUB_WechatSession //注释此行则 不开启【 微信好友 】平台
-#define IMPORT_SUB_WechatTimeline //注释此行则 不开启【 微信朋友圈 】平台
-//#define IMPORT_SUB_WechatFav //注释此行则 不开启【 微信收藏 】平台
+//#define IMPORT_SUB_QQ //注释此行则 不开启【 QQ 】平台
+#define IMPORT_SUB_Wechat //注释此行则 不开启【 微信 】平台
 
 /**
  以下为各平台的相关参数设置
@@ -117,7 +114,7 @@
  
  开放平台地址： http://open.qq.com
  */
-#if (defined IMPORT_SUB_QQFriend) || (defined IMPORT_SUB_QZone)
+#if defined IMPORT_SUB_QQ
 //AppID
 #define MOBSSDKQQAppID @"1105338247"
 //AppKey
@@ -151,11 +148,11 @@
  
  开放平台地址： https://open.weixin.qq.com
  */
-#if (defined IMPORT_SUB_WechatSession) || (defined IMPORT_SUB_WechatTimeline) || (defined IMPORT_SUB_WechatFav)
+#if defined IMPORT_SUB_Wechat
 //AppID
-#define MOBSSDKWeChatAppID @"wx492d8e2064d748b1"
+#define MOBSSDKWeChatAppID @"wx9f691c158b1df33f"
 //AppSecret
-#define MOBSSDKWeChatAppSecret @"c9cfb73dc06b609266a62657b4b1e082"
+#define MOBSSDKWeChatAppSecret @"d4e6f289d9df934d4129d2fa66a439cd"
 #endif
 
 @interface JwShareHelper : NSObject
