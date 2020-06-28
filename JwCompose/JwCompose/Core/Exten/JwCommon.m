@@ -298,5 +298,43 @@
     return YES;
 }
 
+/**获取缓存大小*/
++ (NSString *)getCacheSize{
+    //得到缓存路径
+    NSString * path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
+    NSFileManager * manager = [NSFileManager defaultManager];
+    CGFloat size = 0;
+    //首先判断是否存在缓存文件
+    if ([manager fileExistsAtPath:path]) {
+        NSArray * childFile = [manager subpathsAtPath:path];
+        for (NSString * fileName in childFile) {
+            //缓存文件绝对路径
+            NSString * absolutPath = [path stringByAppendingPathComponent:fileName];
+            size = size + [manager attributesOfItemAtPath:absolutPath error:nil].fileSize;
+        }
+        //计算sdwebimage的缓存和系统缓存总和
+        size = size + [SDImageCache sharedImageCache].totalDiskSize;
+    }
+    return [NSString stringWithFormat:@"%.2fM",size / 1024 / 1024];
+}
+
+/**清除缓存*/
++ (void)cleanCache{
+    //获取缓存路径
+    NSString * path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
+    NSFileManager * manager = [NSFileManager defaultManager];
+    //判断是否存在缓存文件
+    if ([manager fileExistsAtPath:path]) {
+        NSArray * childFile = [manager subpathsAtPath:path];
+        //逐个删除缓存文件
+        for (NSString *fileName in childFile) {
+            NSString * absolutPat = [path stringByAppendingPathComponent:fileName];
+            [manager removeItemAtPath:absolutPat error:nil];
+        }
+        //删除sdwebimage的缓存
+        [[SDImageCache sharedImageCache] clearMemory];
+    }
+}
+
 
 @end

@@ -102,19 +102,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png"
-  install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "${PODS_ROOT}/LBXScan/LBXScan/UI/CodeScan.bundle"
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "${PODS_ROOT}/NSDate+TimeAgo/NSDateTimeAgo.bundle"
   install_resource "${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle"
-  install_resource "${PODS_ROOT}/ZBarSDK/iphone/res/zbar-back.png"
-  install_resource "${PODS_ROOT}/ZBarSDK/iphone/res/zbar-help.html"
-  install_resource "${PODS_ROOT}/ZBarSDK/iphone/res/zbar-helpicons.png"
-  install_resource "${PODS_ROOT}/ZBarSDK/iphone/res/zbar-samples.png"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK.bundle"
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_QQ.bundle"
-  install_resource "${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle"
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_SinaWeibo.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_WeChat.bundle"
   install_resource "${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/Optional/ShareSDKUI.bundle"
 fi
@@ -124,19 +116,11 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png"
-  install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "${PODS_ROOT}/LBXScan/LBXScan/UI/CodeScan.bundle"
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "${PODS_ROOT}/NSDate+TimeAgo/NSDateTimeAgo.bundle"
   install_resource "${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle"
-  install_resource "${PODS_ROOT}/ZBarSDK/iphone/res/zbar-back.png"
-  install_resource "${PODS_ROOT}/ZBarSDK/iphone/res/zbar-help.html"
-  install_resource "${PODS_ROOT}/ZBarSDK/iphone/res/zbar-helpicons.png"
-  install_resource "${PODS_ROOT}/ZBarSDK/iphone/res/zbar-samples.png"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK.bundle"
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_QQ.bundle"
-  install_resource "${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle"
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_SinaWeibo.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_WeChat.bundle"
   install_resource "${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/Optional/ShareSDKUI.bundle"
 fi
@@ -152,7 +136,7 @@ rm -f "$RESOURCES_TO_COPY"
 if [[ -n "${WRAPPER_EXTENSION}" ]] && [ "`xcrun --find actool`" ] && [ -n "${XCASSET_FILES:-}" ]
 then
   # Find all other xcassets (this unfortunately includes those of path pods and other targets).
-  OTHER_XCASSETS=$(find "$PWD" -iname "*.xcassets" -type d)
+  OTHER_XCASSETS=$(find -L "$PWD" -iname "*.xcassets" -type d)
   while read line; do
     if [[ $line != "${PODS_ROOT}*" ]]; then
       XCASSET_FILES+=("$line")

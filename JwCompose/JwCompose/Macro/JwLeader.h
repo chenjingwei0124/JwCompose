@@ -29,6 +29,7 @@
 #import "JwProgressHelper.h"
 #import "JwUUID.h"
 #import "JwiPhoneType.h"
+#import "JwCustomLayer.h"
 
 //JwCate
 #import "NSString+JwCate.h"
@@ -52,6 +53,7 @@
 
 //Model
 #import "JwBaseModel.h"
+#import "JwProjectModel.h"
 #import "JwJumpModel.h"
 
 //Controller

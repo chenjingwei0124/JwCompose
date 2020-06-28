@@ -7,7 +7,7 @@
 //
 
 #import <MOBFoundation/MOBFDataModel.h>
-#import "SSDKTypeDefine.h"
+#import <ShareSDK/SSDKTypeDefine.h>
 
 @interface SSDKRegister : NSObject
 
@@ -29,18 +29,26 @@
  
  @param appId 应用标识
  @param appSecret 应用密钥
+ @param universalLink 应用深度连接
  */
 - (void)setupWeChatWithAppId:(NSString *)appId
-                   appSecret:(NSString *)appSecret;
+                   appSecret:(NSString *)appSecret
+               universalLink:(NSString *)universalLink;
 
 /**
  设置QQ分享平台（QQ空间，QQ好友分享）应用信息
  
  @param appId 应用id
  @param appkey 应用Key
+ @param enableUniversalLink 只支持universallink， 手Q版本>=8.1.3,  可选
+ @param universalLink universallink链接 ，手Q版本 >=8.1.8， 可选
+ 
  */
 - (void)setupQQWithAppId:(NSString *)appId
-                  appkey:(NSString *)appkey;
+                  appkey:(NSString *)appkey
+     enableUniversalLink:(BOOL)enableUniversalLink
+           universalLink:(NSString *)universalLink;
+                  
 
 
 /**
@@ -165,7 +173,16 @@
 - (void)setupInstagramWithClientId:(NSString *)clientId
                       clientSecret:(NSString *)clientSecret
                        redirectUrl:(NSString *)redirectUrl;
+/**
+设置Instagram应用信息
 
+@param clientId 应用标识
+@param clientSecret 应用密钥
+@param redirectUrl 回调地址
+*/
+- (void)setupInstagramInFBWithClientId:(NSString *)clientId
+                      clientSecret:(NSString *)clientSecret
+                       redirectUrl:(NSString *)redirectUrl;
 /**
  设置LinkedIn应用信息
  
@@ -265,11 +282,22 @@
                         consumerSecret:(NSString *)consumerSecret;
 
 /**
- 设置钉钉应用信息
+ 设置钉钉应用信息 适用于分享
  
  @param appId 应用标识
  */
 - (void)setupDingTalkWithAppId:(NSString *)appId;
+
+/**
+ 设置钉钉应用信息 适用于授权
+ 
+ @param appId 授权应用标识
+ @param appSecret 授权应用密钥
+ @param redirectUrl 授权回调地址
+ */
+- (void)setupDingTalkAuthWithAppId:(NSString *)appId
+                         appSecret:(NSString *)appSecret
+                       redirectUrl:(NSString *)redirectUrl;
 
 /**
  设置美拍应用信息
@@ -367,10 +395,11 @@
 - (void)setupDouyinByAppKey:(NSString *)appKey
                   appSecret:(NSString *)appSecret;
 
+
 /**
  设置企业微信应用信息
  
- @param appSchema 应用schema
+ @param appKey 应用appKey
  @param corpId 企业ID
  @param agentId 应用编号
  @param appSecret 应用密钥
@@ -379,5 +408,23 @@
                      corpId:(NSString *)corpId
                     agentId:(NSString *)agentId
                   appSecret:(NSString *)appSecret;
+
+/**
+设置绿洲appKey,与新浪的appkey相同
+ 
+@param appKey 应用标识
+ */
+- (void)setOasisByAppkey:(NSString *)appKey;
+
+
+/**
+设置SnapChat应用信息
+ 
+@param cliendId 应用标识
+@param redirectUrl 回传地址，需要在urlTypes设置此scheme
+ */
+- (void)setSnapChatClientId:(NSString *)cliendId    
+               clientSecret:(NSString *)clientSecret
+                redirectUrl:(NSString *)redirectUrl;
 
 @end

@@ -54,7 +54,6 @@
         preference.javaScriptCanOpenWindowsAutomatically = YES;
         config.preferences = preference;
         
-        //使用在线视频播放器
         config.allowsInlineMediaPlayback = YES;
         if (@available(iOS 9.0, *)) {
             config.requiresUserActionForMediaPlayback = YES;

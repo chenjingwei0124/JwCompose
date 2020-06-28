@@ -25,8 +25,8 @@
     // Do any additional setup after loading the view.
     
     //[self setupTest];
-    NSLog(@"%@", kJwRootTabBarVC);
-    NSLog(@"%@", kJwRootNavigationVC);
+    DLog(@"%@", kJwRootTabBarVC);
+    DLog(@"%@", kJwRootNavigationVC);
     
     [self setupView];
     [self setupData];
@@ -125,7 +125,7 @@
         [self showScreenshot];
     } else if ([model.Id isEqualToString:@"6"]) {
         NSArray *tArr = @[];
-        NSLog(@"%@", tArr[1]);
+        DLog(@"%@", tArr[1]);
     }
     else {
         /**

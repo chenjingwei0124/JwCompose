@@ -12,9 +12,6 @@
 
 @interface JwHttpManager ()
 
-@property (nonatomic, strong) AFHTTPSessionManager *HTTPsession;
-@property (nonatomic, strong) AFURLSessionManager *URLSession;
-
 @end
 
 @implementation JwHttpManager
@@ -65,12 +62,18 @@
 - (void)GET:(NSDictionary *)params url:(NSString *)url success:(void (^)(id data))success failure:(void (^)(NSError * error))failure{
     
     DLog(@"%@--%@", url, params);
-    [self.HTTPsession GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+
+    [self.HTTPsession GET:url parameters:params headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DLog(@"%@--%@", url, responseObject);
         if ([JwHttpHelper httpManager:self shouldSuccessWithResponse:responseObject]) {
             success(responseObject);
+        }else{
+            NSString *domain = [JwCommon jw_stringCheckWithData:responseObject[@"msg"]];
+            NSInteger code = [responseObject[@"code"] integerValue];
+            NSError *error = [NSError errorWithDomain:domain code:code userInfo:responseObject];
+            failure(error);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DLog(@"%@--%@", url, error);
@@ -82,12 +85,17 @@
 - (void)POST:(NSDictionary *)params url:(NSString *)url success:(void (^)(id data))success failure:(void (^)(NSError * error))failure{
     
     DLog(@"%@--%@", url, params);
-    [self.HTTPsession POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+    [self.HTTPsession POST:url parameters:params headers:nil progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DLog(@"%@--%@", url, responseObject);
         if ([JwHttpHelper httpManager:self shouldSuccessWithResponse:responseObject]) {
             success(responseObject);
+        }else{
+            NSString *domain = [JwCommon jw_stringCheckWithData:responseObject[@"msg"]];
+            NSInteger code = [responseObject[@"code"] integerValue];
+            NSError *error = [NSError errorWithDomain:domain code:code userInfo:responseObject];
+            failure(error);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DLog(@"%@--%@", url, error);
@@ -101,7 +109,7 @@
     
     DLog(@"%@--%@", url, params);
     //imageDictionary 必须 imageName : image
-    [self.HTTPsession POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [self.HTTPsession POST:url parameters:params headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSArray *imageKeys = [imageDictionary allKeys];
         for (NSInteger i = 0; i < imageKeys.count; i++) {
             NSData *data = UIImageJPEGRepresentation(imageDictionary[imageKeys[i]], 0.5);
@@ -165,30 +173,37 @@
 }
 
 - (AFURLSessionManager *)URLSession{
-    if (!_URLSession) {
+    //if (!_URLSession) {
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         AFURLSessionManager *URLSession = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
         _URLSession = URLSession;
-    }
+    //}
     return _URLSession;
 }
 
 - (AFHTTPSessionManager *)HTTPsession{
-    if (!_HTTPsession) {
-        AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-        session.requestSerializer.timeoutInterval = 15;
+    //if (!_HTTPsession) {
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        config.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+        config.URLCache = nil;
+        
+        AFHTTPSessionManager *session = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:config];
         //接收类型
         //session.requestSerializer = [AFJSONRequestSerializer serializer];
         session.responseSerializer = [AFJSONResponseSerializer serializer];
         session.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"text/json", @"application/json", @"text/plain", @"text/javascript", nil];
+    session.requestSerializer.timeoutInterval = 20;
         //关闭缓存避免干扰测试
         session.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+        //设置请求头
+        //[session.requestSerializer setValue:@"close" forHTTPHeaderField:@"Connection"];
         //单项验证
         //[session setSecurityPolicy:[self customSecurityPolicy]];
         //双向验证
         //[self checkCredential:session];
         _HTTPsession = session;
-    }
+    //}
+    
     return _HTTPsession;
 }
 

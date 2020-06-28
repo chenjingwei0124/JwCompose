@@ -1,4 +1,5 @@
-platform :ios, '8.0'
+#source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
 
 inhibit_all_warnings!
 
@@ -21,11 +22,11 @@ pod 'UIAlertViewBlockExtension'
 pod 'MBProgressHUD'
 pod 'IQKeyboardManager'
 pod 'SDCycleScrollView'
+#pod 'ZFPlayer'
 
 pod 'SDWebImage'
-pod 'SDWebImage/GIF'
-pod 'SDWebImage/WebP'
 pod 'FLAnimatedImage'
+pod 'SDWebImageFLPlugin'
 
 pod 'PPGetAddressBook'
 pod 'MJRefresh'
@@ -37,12 +38,11 @@ pod 'MJExtension'
 
 pod 'FMDB'
 pod 'GPUImage'
-pod 'iCarousel'
 
 pod 'LBXAlertAction'
 pod 'LBXScan/LBXNative'
 pod 'LBXScan/LBXZXing'
-pod 'LBXScan/LBXZBar'
+#pod 'LBXScan/LBXZBar'
 pod 'LBXScan/UI' 
 
 pod 'YYModel'
@@ -67,24 +67,20 @@ pod 'JPush'
 pod 'mob_sharesdk'
 pod 'mob_sharesdk/ShareSDKUI'
 pod 'mob_sharesdk/ShareSDKExtension'
-#闭环分享依赖
-pod 'mob_sharesdk/ShareSDKRestoreScene'
 #ShareSDKPlatforms
-pod 'mob_sharesdk/ShareSDKPlatforms/QQ'
-pod 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
 pod 'mob_sharesdk/ShareSDKPlatforms/WeChatFull'
 #mob短信验证
 pod 'mob_smssdk'
 #Crash收集
 pod 'Bugly'
 #友盟分析
-pod 'UMCCommon'
-pod 'UMCAnalytics'
+#pod 'UMCCommon'
+#pod 'UMCAnalytics'
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
-            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '8.1'
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
         end
     end
 end

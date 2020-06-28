@@ -1,20 +1,20 @@
 PODS:
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
-  - AFNetworking/NSURLSession (3.2.1):
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - Bugly (2.5.0)
+  - Bugly (2.5.5)
   - FCUUID (1.3.1):
     - UICKeyChainStore (~> 2.1.0)
   - FLAnimatedImage (1.0.12)
@@ -23,82 +23,55 @@ PODS:
   - FMDB/standard (2.7.5)
   - GPUImage (0.1.7)
   - iCarousel (1.8.3)
-  - IQKeyboardManager (6.5.0)
-  - JCore (2.1.2)
-  - JPush (3.2.4):
+  - IQKeyboardManager (6.5.5)
+  - JCore (2.3.0)
+  - JPush (3.3.3):
     - JCore (< 3.0.0, >= 2.0.0)
   - JSONModel (1.8.0)
   - LBXAlertAction (1.1.1)
   - LBXScan/LBXNative (2.3):
     - LBXScan/Types (~> 2.2)
-  - LBXScan/LBXZBar (2.3):
-    - LBXScan/Types (~> 2.2)
-    - ZBarSDK (~> 1.3.1)
   - LBXScan/LBXZXing (2.3):
     - LBXScan/Types (~> 2.2)
   - LBXScan/Types (2.3)
   - LBXScan/UI (2.3):
     - LBXScan/Types (~> 2.2)
-  - libwebp (1.0.3):
-    - libwebp/demux (= 1.0.3)
-    - libwebp/mux (= 1.0.3)
-    - libwebp/webp (= 1.0.3)
-  - libwebp/demux (1.0.3):
-    - libwebp/webp
-  - libwebp/mux (1.0.3):
-    - libwebp/demux
-  - libwebp/webp (1.0.3)
   - Masonry (1.1.0)
-  - MBProgressHUD (1.1.0)
+  - MBProgressHUD (1.2.0)
   - MJExtension (3.2.1)
-  - MJRefresh (3.2.0)
-  - mob_sharesdk (4.3.2):
-    - mob_sharesdk/ShareSDK (= 4.3.2)
-    - MOBFoundation
-  - mob_sharesdk/ShareSDK (4.3.2):
-    - MOBFoundation
-  - mob_sharesdk/ShareSDKExtension (4.3.2):
+  - MJRefresh (3.4.3)
+  - mob_sharesdk (4.3.9):
+    - mob_sharesdk/ShareSDK (= 4.3.9)
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDK (4.3.9):
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKExtension (4.3.9):
     - mob_sharesdk/ShareSDK
-    - MOBFoundation
-  - mob_sharesdk/ShareSDKPlatforms/QQ (4.3.2):
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/WeChatFull (4.3.9):
     - mob_sharesdk/ShareSDK
-    - MOBFoundation
-  - mob_sharesdk/ShareSDKPlatforms/SinaWeibo (4.3.2):
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKUI (4.3.9):
     - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_smssdk (3.2.8):
     - MOBFoundation
-  - mob_sharesdk/ShareSDKPlatforms/WeChatFull (4.3.2):
-    - mob_sharesdk/ShareSDK
-    - MOBFoundation
-  - mob_sharesdk/ShareSDKRestoreScene (4.3.2):
-    - mob_sharesdk/ShareSDKExtension
-    - MOBFoundation
-  - mob_sharesdk/ShareSDKUI (4.3.2):
-    - mob_sharesdk/ShareSDK
-    - MOBFoundation
-  - mob_smssdk (3.2.3):
-    - MOBFoundation
-  - MOBFoundation (3.2.6)
+  - MOBFoundation (3.2.17)
   - "NSDate+TimeAgo (1.0.6)"
-  - NSString-Hashes (1.2.2)
+  - NSString-Hashes (1.3.1)
   - pop (1.0.12)
   - PPGetAddressBook (0.2.8)
   - SAMKeychain (1.5.3)
-  - SDCycleScrollView (1.75):
-    - SDWebImage (>= 4.0.0)
-  - SDWebImage (4.4.7):
-    - SDWebImage/Core (= 4.4.7)
-  - SDWebImage/Core (4.4.7)
-  - SDWebImage/GIF (4.4.7):
-    - FLAnimatedImage (~> 1.0)
-    - SDWebImage/Core
-  - SDWebImage/WebP (4.4.7):
-    - libwebp (< 2.0, >= 0.5)
-    - SDWebImage/Core
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.8.1):
+    - SDWebImage/Core (= 5.8.1)
+  - SDWebImage/Core (5.8.1)
+  - SDWebImageFLPlugin (0.4.0):
+    - FLAnimatedImage (>= 1.0.11)
+    - SDWebImage/Core (~> 5.6)
   - UIAlertViewBlockExtension (1.1.4)
   - UICKeyChainStore (2.1.2)
-  - UMCAnalytics (6.0.5):
-    - UMCCommon
-  - UMCCommon (2.1.1)
   - YYAsyncLayer (1.0)
   - YYCache (1.0.4)
   - YYCategories (1.0.4):
@@ -114,7 +87,6 @@ PODS:
   - YYWebImage (1.0.5):
     - YYCache
     - YYImage
-  - ZBarSDK (1.3.1)
 
 DEPENDENCIES:
   - AFNetworking
@@ -129,7 +101,6 @@ DEPENDENCIES:
   - JSONModel
   - LBXAlertAction
   - LBXScan/LBXNative
-  - LBXScan/LBXZBar
   - LBXScan/LBXZXing
   - LBXScan/UI
   - Masonry
@@ -138,10 +109,7 @@ DEPENDENCIES:
   - MJRefresh
   - mob_sharesdk
   - mob_sharesdk/ShareSDKExtension
-  - mob_sharesdk/ShareSDKPlatforms/QQ
-  - mob_sharesdk/ShareSDKPlatforms/SinaWeibo
   - mob_sharesdk/ShareSDKPlatforms/WeChatFull
-  - mob_sharesdk/ShareSDKRestoreScene
   - mob_sharesdk/ShareSDKUI
   - mob_smssdk
   - "NSDate+TimeAgo"
@@ -151,11 +119,8 @@ DEPENDENCIES:
   - SAMKeychain
   - SDCycleScrollView
   - SDWebImage
-  - SDWebImage/GIF
-  - SDWebImage/WebP
+  - SDWebImageFLPlugin
   - UIAlertViewBlockExtension
-  - UMCAnalytics
-  - UMCCommon
   - YYAsyncLayer
   - YYCache
   - YYCategories
@@ -167,7 +132,7 @@ DEPENDENCIES:
   - YYWebImage
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AFNetworking
     - Bugly
     - FCUUID
@@ -181,7 +146,6 @@ SPEC REPOS:
     - JSONModel
     - LBXAlertAction
     - LBXScan
-    - libwebp
     - Masonry
     - MBProgressHUD
     - MJExtension
@@ -196,10 +160,9 @@ SPEC REPOS:
     - SAMKeychain
     - SDCycleScrollView
     - SDWebImage
+    - SDWebImageFLPlugin
     - UIAlertViewBlockExtension
     - UICKeyChainStore
-    - UMCAnalytics
-    - UMCCommon
     - YYAsyncLayer
     - YYCache
     - YYCategories
@@ -209,41 +172,38 @@ SPEC REPOS:
     - YYModel
     - YYText
     - YYWebImage
-    - ZBarSDK
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  Bugly: eded937bbb1f731cacf689c2d934ddbd9ab34f83
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
-  IQKeyboardManager: 700e5155d6a292383b54e8678aec769e14fc78fc
-  JCore: 1a426120b510cdebfd67b82bfb9483238ee09413
-  JPush: 29466e5f30dbd703f640d70540e411e829cac1fa
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  JCore: 7fb83e1e75e00df37e9e1e33f3adae79182ad57c
+  JPush: 61b3dc8c2bdefb7c48e7ca283f9fe42e71bfe063
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   LBXAlertAction: d55188a2debb2bdd88b8d102c1c5552151c9014d
   LBXScan: e51449f0832d1fe17da632af0d22adeb3cfa3543
-  libwebp: db273b5a72581ca31985dec5c3b8bc826a5f59ee
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
-  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
-  mob_sharesdk: 1f9c5b4e252296e7d3571e5f8e7ca13ea305f924
-  mob_smssdk: cdb6a31d4fd4667ed928e2eca03f21ad89ebc05c
-  MOBFoundation: 08c456357888e4c984fba23bbf04cfd2f4fc1e02
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  mob_sharesdk: ce760a34f154bad7a586ec5e7c9d6dd423aa084c
+  mob_smssdk: a25dbb1c50d96e7a18bb5b6e5a46b17a2bd2f532
+  MOBFoundation: 37e2c100051fd710976b1f8d00643d28f31fcaca
   "NSDate+TimeAgo": 35601c619b2d59290055e4fe76e61d97677a2360
-  NSString-Hashes: c3848d809e92650e4fb17db5d8cc4bd2aa1eaddd
+  NSString-Hashes: 19432e295103cbe5faad2f3c0c987d1868545d85
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   PPGetAddressBook: e4b6b0a87e852df5d5b90c44ecd9ded7f6f1ccf6
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
-  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
-  SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  SDWebImage: e3eae2eda88578db0685a0c88597fdadd9433f05
+  SDWebImageFLPlugin: 6c2295fb1242d44467c6c87dc5db6b0a13228fd8
   UIAlertViewBlockExtension: 09420b4ffd0160321d4c635b523e4e882d94aeaf
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
-  UMCAnalytics: 045be2cd1ec05aa95ad62405a850757f932e2d59
-  UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
   YYAsyncLayer: df6b01ebc695c5f6b4c15dd5c23fa3e081eb25c0
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
@@ -253,8 +213,7 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
-  ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
 
-PODFILE CHECKSUM: dedc17b111b54f0c32be6e04e9b5e2128d16f166
+PODFILE CHECKSUM: 29b99617d655b0b1ccfdb6896ae8674d9a60c0ca
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.1

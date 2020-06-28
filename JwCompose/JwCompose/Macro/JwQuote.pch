@@ -16,6 +16,7 @@
 #import <AFNetworking.h>
 #import <FCUUID.h>
 #import <FLAnimatedImage.h>
+#import <FLAnimatedImageView+WebCache.h>
 #import <iCarousel.h>
 #import <JSONModel.h>
 #import <LBXAlertAction.h>

@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSString (Hashes)
 
 @property (nonatomic, readonly) NSString *md5;
@@ -17,3 +19,5 @@
 @property (nonatomic, readonly) NSString *sha512;
 
 @end
+
+NS_ASSUME_NONNULL_END

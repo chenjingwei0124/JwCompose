@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JwHttpManager : NSObject
 
+@property (nonatomic, strong) AFHTTPSessionManager *HTTPsession;
+@property (nonatomic, strong) AFURLSessionManager *URLSession;
+
 + (JwHttpManager *)sharedManager;
 
 - (void)GET:(NSDictionary *)params point:(NSString *)point success:(void (^)(id data))success failure:(void (^)(NSError * error))failure;

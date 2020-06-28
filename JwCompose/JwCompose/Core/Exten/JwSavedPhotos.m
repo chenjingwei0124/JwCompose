@@ -53,7 +53,6 @@
         //需要加载图片的控件(UIImageView, UIButton等)
         UIImageView *imageView = [[UIImageView alloc] init];
         SDWebImageDownloader *manager = [SDWebImageDownloader sharedDownloader];
-        manager.downloadTimeout = 5;
         [manager downloadImageWithURL:[imageView jw_urlWithEncodeString:imageUrlStr] options:1 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
             
         } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {

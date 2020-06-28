@@ -1,0 +1,1 @@
+../../../SDWebImageFLPlugin/SDWebImageFLPlugin/Classes/FLAnimatedImageBridge/SDFLAnimatedImage.h

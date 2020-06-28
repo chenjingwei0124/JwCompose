@@ -101,6 +101,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)jw_fileHasLive:(NSString *)path;
 
 
+/**获取缓存大小*/
++ (NSString *)getCacheSize;
+/**清除缓存*/
++ (void)cleanCache;
+
 @end
 
 NS_ASSUME_NONNULL_END
