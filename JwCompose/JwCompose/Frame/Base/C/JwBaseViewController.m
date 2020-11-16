@@ -24,6 +24,11 @@
     }else if (self.jw_navigationBarStyle == JwNavigationBarDefault){
         [self.navigationController setNavigationBarHidden:NO animated:YES];
     }
+    
+    if (self.jw_navigationBarTintColor) {
+        self.navigationController.navigationBar.barTintColor = self.jw_navigationBarTintColor;
+    }
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

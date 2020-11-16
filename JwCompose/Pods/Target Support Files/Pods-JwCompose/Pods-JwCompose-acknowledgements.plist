@@ -451,17 +451,6 @@ THIS SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Public Domain
-</string>
-			<key>License</key>
-			<string>public domain</string>
-			<key>Title</key>
-			<string>NSString-Hashes</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
 			<string>MIT License
 
 Copyright (c) 2016 jkpang &lt;jkpang@outlook.com&gt;

@@ -42,7 +42,6 @@
 		C880F9EA24A88345006DB23A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C880F91124A88344006DB23A /* LaunchScreen.storyboard */; };
 		C880F9EB24A88345006DB23A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C880F91324A88344006DB23A /* main.m */; };
 		C880F9EC24A88345006DB23A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C880F91424A88344006DB23A /* AppDelegate.m */; };
-		C880F9ED24A88345006DB23A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C880F91624A88344006DB23A /* Info.plist */; };
 		C880F9EE24A88345006DB23A /* JwLocalCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C880F91A24A88344006DB23A /* JwLocalCenter.m */; };
 		C880F9EF24A88345006DB23A /* JwHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C880F91C24A88344006DB23A /* JwHttpManager.m */; };
 		C880F9F024A88345006DB23A /* JwBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = C880F91F24A88344006DB23A /* JwBaseService.m */; };
@@ -527,13 +526,13 @@
 		C880F91B24A88344006DB23A /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				C880F91C24A88344006DB23A /* JwHttpManager.m */,
 				C880F91D24A88344006DB23A /* JwBaseService.h */,
-				C880F91E24A88344006DB23A /* JwHttpHelper.h */,
 				C880F91F24A88344006DB23A /* JwBaseService.m */,
-				C880F92024A88344006DB23A /* JwHttpManager.h */,
-				C880F92124A88344006DB23A /* JwServiceDefine.h */,
+				C880F91E24A88344006DB23A /* JwHttpHelper.h */,
 				C880F92224A88344006DB23A /* JwHttpHelper.m */,
+				C880F92024A88344006DB23A /* JwHttpManager.h */,
+				C880F91C24A88344006DB23A /* JwHttpManager.m */,
+				C880F92124A88344006DB23A /* JwServiceDefine.h */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -541,8 +540,8 @@
 		C880F92324A88344006DB23A /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				C880F92424A88344006DB23A /* JwDataService.m */,
 				C880F92524A88344006DB23A /* JwDataService.h */,
+				C880F92424A88344006DB23A /* JwDataService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -688,11 +687,11 @@
 		C880F94A24A88344006DB23A /* WebView */ = {
 			isa = PBXGroup;
 			children = (
-				C880F94B24A88344006DB23A /* JwWebController.m */,
 				C880F94C24A88344006DB23A /* JSOC.html */,
 				C880F94D24A88344006DB23A /* JwWeakScriptMessageDelegate.h */,
-				C880F94E24A88344006DB23A /* JwWebController.h */,
 				C880F94F24A88344006DB23A /* JwWeakScriptMessageDelegate.m */,
+				C880F94E24A88344006DB23A /* JwWebController.h */,
+				C880F94B24A88344006DB23A /* JwWebController.m */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -780,16 +779,16 @@
 		C880F96A24A88344006DB23A /* C */ = {
 			isa = PBXGroup;
 			children = (
-				C880F96B24A88344006DB23A /* JwNavigationController.m */,
-				C880F96C24A88344006DB23A /* JwBaseMenuController.m */,
-				C880F96D24A88344006DB23A /* JwTabBarController.m */,
-				C880F96E24A88344006DB23A /* JwBaseViewController.h */,
 				C880F96F24A88344006DB23A /* JwBaseBackController.h */,
-				C880F97024A88344006DB23A /* JwNavigationController.h */,
-				C880F97124A88344006DB23A /* JwTabBarController.h */,
-				C880F97224A88344006DB23A /* JwBaseMenuController.h */,
 				C880F97324A88344006DB23A /* JwBaseBackController.m */,
+				C880F97224A88344006DB23A /* JwBaseMenuController.h */,
+				C880F96C24A88344006DB23A /* JwBaseMenuController.m */,
+				C880F96E24A88344006DB23A /* JwBaseViewController.h */,
 				C880F97424A88344006DB23A /* JwBaseViewController.m */,
+				C880F97024A88344006DB23A /* JwNavigationController.h */,
+				C880F96B24A88344006DB23A /* JwNavigationController.m */,
+				C880F97124A88344006DB23A /* JwTabBarController.h */,
+				C880F96D24A88344006DB23A /* JwTabBarController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1095,7 +1094,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Jw;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "陈警卫";
 				TargetAttributes = {
 					C8DFEFE52339FADA00048FDC = {
@@ -1130,7 +1129,6 @@
 				C880F9EA24A88345006DB23A /* LaunchScreen.storyboard in Resources */,
 				C880FA0224A88345006DB23A /* JwRouteJumpController.xib in Resources */,
 				C880FA2424A88345006DB23A /* JwIntroDefaultCell.xib in Resources */,
-				C880F9ED24A88345006DB23A /* Info.plist in Resources */,
 				C880F9F324A88345006DB23A /* JwJumpRoute.plist in Resources */,
 				C880F9F624A88345006DB23A /* mine.json in Resources */,
 				C880FA0524A88345006DB23A /* subs.json in Resources */,
@@ -1322,6 +1320,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1346,7 +1345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1380,6 +1379,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1398,7 +1398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

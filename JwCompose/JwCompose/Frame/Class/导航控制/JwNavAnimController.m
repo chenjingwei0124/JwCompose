@@ -46,6 +46,21 @@
     
     btn0.jw_index = 0;
     btn1.jw_index = 1;
+    
+    JwButton *btn2 = [JwButton buttonWithType:(UIButtonTypeSystem)];
+    btn2.frame = CGRectMake(0, btn1.jw_bottom + 20, self.view.jw_width, 30);
+    [btn2 setTitle:@"浅色导航栏" forState:(UIControlStateNormal)];
+    [btn2 addTarget:self action:@selector(btnAction:) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:btn2];
+    
+    JwButton *btn3 = [JwButton buttonWithType:(UIButtonTypeSystem)];
+    btn3.frame = CGRectMake(0, btn2.jw_bottom + 20, self.view.jw_width, 30);
+    [btn3 setTitle:@"深色导航栏" forState:(UIControlStateNormal)];
+    [btn3 addTarget:self action:@selector(btnAction:) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:btn3];
+    
+    btn2.jw_index = 2;
+    btn3.jw_index = 3;
 }
 
 - (void)btnAction:(JwButton *)btn{
@@ -54,6 +69,10 @@
         vc.jw_navigationBarStyle = JwNavigationBarShow;
     }else if (btn.jw_index == 1){
         vc.jw_navigationBarStyle = JwNavigationBarHidden;
+    }else if (btn.jw_index == 2){
+        vc.jw_navigationBarTintColor = [UIColor whiteColor];
+    }else if (btn.jw_index == 3){
+        vc.jw_navigationBarTintColor = [UIColor redColor];
     }
     [self.navigationController pushViewController:vc animated:YES];
 }

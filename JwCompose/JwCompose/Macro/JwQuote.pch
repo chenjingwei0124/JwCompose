@@ -28,7 +28,7 @@
 #import <UIAlertView+BlockExtension.h>
 #import <SDCycleScrollView.h>
 #import <PPGetAddressBook.h>
-#import <NSString+Hashes.h>
+//#import <NSString+Hashes.h>
 #import <IQKeyboardManager.h>
 #import <YYAsyncLayer.h>
 #import <YYCache.h>

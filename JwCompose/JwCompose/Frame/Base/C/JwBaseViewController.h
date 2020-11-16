@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 导航栏状态 */
 @property (nonatomic, assign) JwNavigationBarStyle jw_navigationBarStyle;
+/** 导航栏颜色 */
+@property (nonatomic, strong) UIColor *jw_navigationBarTintColor;
 /** 跳转参数 */
 @property (nonatomic, strong) JwJumpModel *jumpModel;
 

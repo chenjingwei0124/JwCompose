@@ -55,7 +55,7 @@ pod 'YYDispatchQueuePool'
 pod 'YYAsyncLayer'
 pod 'YYCategories'
 
-pod 'NSString-Hashes'
+#pod 'NSString-Hashes'
 pod 'NSDate+TimeAgo'
 
 pod 'Masonry'

@@ -28,8 +28,9 @@
 
 - (void)setupView{
     [self.view addSubview:self.webView];
-    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"OCJS" style:(UIBarButtonItemStylePlain) target:self action:@selector(OCJSAction)];
+    
+    [self.webView loadHTMLString:@"<html><header></header><body><input type='file' accept='audio/*'></body></html>" baseURL:nil];
 }
 
 - (void)dealloc{
@@ -71,9 +72,9 @@
         _webView.navigationDelegate = self;
         _webView.allowsBackForwardNavigationGestures = YES;
         
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"JSOC" ofType:@"html"];
-        NSString *htmlString = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-        [_webView loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
+        //NSString *path = [[NSBundle mainBundle] pathForResource:@"JSOC" ofType:@"html"];
+        //NSString *htmlString = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        //[_webView loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
     }
     return  _webView;
 }
