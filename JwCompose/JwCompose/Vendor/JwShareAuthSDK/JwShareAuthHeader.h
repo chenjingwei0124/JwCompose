@@ -17,16 +17,16 @@
 /** 以下为各平台的相关参数设置 */
 
 //UniversalLink
-#define MOBSSDKUniversalLink @"https://api-sip.510gow.com/"
+#define MOBSSDKUniversalLink @""
 
 #pragma mark - 新浪微博配置信息
 /** 开放平台地址： http://open.weibo.com */
 
 #ifdef IMPORT_SINA_WEIBO
 //AppKey
-#define MOBSSDKSinaWeiboAppKey @"3389791131"
+#define MOBSSDKSinaWeiboAppKey @""
 //AppSecret
-#define MOBSSDKSinaWeiboAppSecret @"bbaff4a5083d6097f74703e4e5cc4dbd"
+#define MOBSSDKSinaWeiboAppSecret @""
 #endif
 
 
@@ -35,9 +35,9 @@
 
 #if defined IMPORT_SUB_QQ
 //AppID
-#define MOBSSDKQQAppID @"1110514410"
+#define MOBSSDKQQAppID @""
 //AppKey
-#define MOBSSDKQQAppKey @"exJOpwcUQ9SiXGFX"
+#define MOBSSDKQQAppKey @""
 #endif
 
 
@@ -45,9 +45,9 @@
 /** 开放平台地址： https://open.weixin.qq.com */
 #if defined IMPORT_SUB_Wechat
 //AppID
-#define MOBSSDKWeChatAppID @"wx302098a58b772f43"
+#define MOBSSDKWeChatAppID @""
 //AppSecret
-#define MOBSSDKWeChatAppSecret @"548dc9625d6d6a265c6d13d2954b9c71"
+#define MOBSSDKWeChatAppSecret @""
 #endif
 
 #endif /* JwShareAuthHeader_h */
