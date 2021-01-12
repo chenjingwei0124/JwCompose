@@ -60,13 +60,15 @@
 }
 
 - (void)GET:(NSDictionary *)params url:(NSString *)url success:(void (^)(id data))success failure:(void (^)(NSError * error))failure{
-    
+    Weak(self);
     DLog(@"%@--%@", url, params);
 
     [self.HTTPsession GET:url parameters:params headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DLog(@"%@--%@", url, responseObject);
+        [wself.HTTPsession invalidateSessionCancelingTasks:YES resetSession:YES];
+        
         if ([JwHttpHelper httpManager:self shouldSuccessWithResponse:responseObject]) {
             success(responseObject);
         }else{
@@ -77,6 +79,8 @@
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DLog(@"%@--%@", url, error);
+        [wself.HTTPsession invalidateSessionCancelingTasks:YES resetSession:YES];
+        
         failure(error);
         [JwHttpHelper httpManager:self didResultWithResponse:nil error:error];
     }];
@@ -84,12 +88,16 @@
 
 - (void)POST:(NSDictionary *)params url:(NSString *)url success:(void (^)(id data))success failure:(void (^)(NSError * error))failure{
     
+    Weak(self);
     DLog(@"%@--%@", url, params);
+    
     [self.HTTPsession POST:url parameters:params headers:nil progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DLog(@"%@--%@", url, responseObject);
-        if ([JwHttpHelper httpManager:self shouldSuccessWithResponse:responseObject]) {
+        [wself.HTTPsession invalidateSessionCancelingTasks:YES resetSession:YES];
+        
+        if ([JwHttpHelper httpManager:wself shouldSuccessWithResponse:responseObject]) {
             success(responseObject);
         }else{
             NSString *domain = [JwCommon jw_stringCheckWithData:responseObject[@"msg"]];
@@ -99,8 +107,10 @@
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DLog(@"%@--%@", url, error);
+        [wself.HTTPsession invalidateSessionCancelingTasks:YES resetSession:YES];
+        
         failure(error);
-        [JwHttpHelper httpManager:self didResultWithResponse:nil error:error];
+        [JwHttpHelper httpManager:wself didResultWithResponse:nil error:error];
     }];
 }
 
@@ -173,16 +183,16 @@
 }
 
 - (AFURLSessionManager *)URLSession{
-    //if (!_URLSession) {
+    if (!_URLSession) {
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         AFURLSessionManager *URLSession = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
         _URLSession = URLSession;
-    //}
+    }
     return _URLSession;
 }
 
 - (AFHTTPSessionManager *)HTTPsession{
-    //if (!_HTTPsession) {
+    if (!_HTTPsession) {
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
         config.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
         config.URLCache = nil;
@@ -192,7 +202,7 @@
         //session.requestSerializer = [AFJSONRequestSerializer serializer];
         session.responseSerializer = [AFJSONResponseSerializer serializer];
         session.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"text/json", @"application/json", @"text/plain", @"text/javascript", nil];
-    session.requestSerializer.timeoutInterval = 20;
+        session.requestSerializer.timeoutInterval = 20;
         //关闭缓存避免干扰测试
         session.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
         //设置请求头
@@ -202,8 +212,7 @@
         //双向验证
         //[self checkCredential:session];
         _HTTPsession = session;
-    //}
-    
+    }
     return _HTTPsession;
 }
 

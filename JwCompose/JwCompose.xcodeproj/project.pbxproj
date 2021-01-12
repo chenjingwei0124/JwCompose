@@ -385,6 +385,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C81996BF257DFA5C00788701 /* JwAVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JwAVPlayer;
+			sourceTree = "<group>";
+		};
 		C880F8CD24A88344006DB23A /* JwCompose */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,8 +658,8 @@
 		C880F93E24A88344006DB23A /* C */ = {
 			isa = PBXGroup;
 			children = (
-				C880F93F24A88344006DB23A /* JwHomeController.m */,
 				C880F94024A88344006DB23A /* JwHomeController.h */,
+				C880F93F24A88344006DB23A /* JwHomeController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -832,6 +839,7 @@
 		C880F98724A88344006DB23A /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C81996BF257DFA5C00788701 /* JwAVPlayer */,
 				C880F98824A88344006DB23A /* Gradient */,
 				C880F98B24A88344006DB23A /* JYEqualCellSpaceFlowLayout */,
 				C880F98E24A88344006DB23A /* AESCipher */,
@@ -1094,7 +1102,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Jw;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "陈警卫";
 				TargetAttributes = {
 					C8DFEFE52339FADA00048FDC = {
@@ -1414,7 +1422,7 @@
 				CODE_SIGN_ENTITLEMENTS = JwCompose/App/JwCompose.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2SMUD7B7U3;
+				DEVELOPMENT_TEAM = 3GMJYX32U9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1427,7 +1435,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chenjw.compose;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chenjw.composec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1442,7 +1450,7 @@
 				CODE_SIGN_ENTITLEMENTS = JwCompose/App/JwCompose.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2SMUD7B7U3;
+				DEVELOPMENT_TEAM = 3GMJYX32U9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1455,7 +1463,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chenjw.compose;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chenjw.composec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
