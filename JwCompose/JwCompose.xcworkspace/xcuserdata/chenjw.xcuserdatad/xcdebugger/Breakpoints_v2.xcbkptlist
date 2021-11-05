@@ -50,38 +50,6 @@
             endingLineNumber = "149"
             landmarkName = "-webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:completionHandler:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "ABF08A17-7ED4-480E-AAA6-791EA9438F59 - 508998b6edfc41f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[JwWebController webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:completionHandler:]"
-                  moduleName = "JwCompose"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chenjw/CJProject/JwCompose/JwCompose/JwCompose/Frame/Class/WebView/JwWebController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "149"
-                  endingLineNumber = "149"
-                  offsetFromSymbolStart = "168">
-               </Location>
-               <Location
-                  uuid = "ABF08A17-7ED4-480E-AAA6-791EA9438F59 - 34591f81e6e6f533"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__97-[JwWebController webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:completionHandler:]_block_invoke"
-                  moduleName = "JwCompose"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chenjw/CJProject/JwCompose/JwCompose/JwCompose/Frame/Class/WebView/JwWebController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "150"
-                  endingLineNumber = "150"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

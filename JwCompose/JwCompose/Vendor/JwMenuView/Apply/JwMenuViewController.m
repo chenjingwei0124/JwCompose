@@ -43,7 +43,7 @@
     self.menuView.scrollDirection = JwMenuViewScrollDirectionHorizontal;
     self.menuView.isScroll = YES;
     self.menuView.isAverageItem = NO;
-    self.menuView.isShowSpaceLine = NO;
+    self.menuView.isShowSpaceLine = YES;
     self.menuView.itemEdge = UIEdgeInsetsMake(0, 10, 0, 10);
     self.menuView.itemSpace = 10;
     self.menuView.isShowProgress = YES;

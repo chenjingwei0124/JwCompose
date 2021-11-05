@@ -916,12 +916,12 @@
 		C880F99824A88344006DB23A /* Apply */ = {
 			isa = PBXGroup;
 			children = (
-				C880F99924A88344006DB23A /* JwMenuViewCell.m */,
 				C880F99A24A88344006DB23A /* JwMenuTextItem.h */,
-				C880F99B24A88344006DB23A /* JwMenuViewController.m */,
-				C880F99C24A88344006DB23A /* JwMenuViewCell.h */,
 				C880F99D24A88344006DB23A /* JwMenuTextItem.m */,
+				C880F99C24A88344006DB23A /* JwMenuViewCell.h */,
+				C880F99924A88344006DB23A /* JwMenuViewCell.m */,
 				C880F99E24A88344006DB23A /* JwMenuViewController.h */,
+				C880F99B24A88344006DB23A /* JwMenuViewController.m */,
 			);
 			path = Apply;
 			sourceTree = "<group>";
@@ -929,10 +929,10 @@
 		C880F99F24A88344006DB23A /* V */ = {
 			isa = PBXGroup;
 			children = (
-				C880F9A024A88344006DB23A /* JwMenuView.h */,
 				C880F9A124A88344006DB23A /* JwMenuItem.h */,
-				C880F9A224A88344006DB23A /* JwMenuView.m */,
 				C880F9A324A88344006DB23A /* JwMenuItem.m */,
+				C880F9A024A88344006DB23A /* JwMenuView.h */,
+				C880F9A224A88344006DB23A /* JwMenuView.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1102,7 +1102,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Jw;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "陈警卫";
 				TargetAttributes = {
 					C8DFEFE52339FADA00048FDC = {
